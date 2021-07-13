@@ -9,6 +9,9 @@
 <script src="./js/jquery.js"></script>
 <script>
 
+1번이 수정한 내용?
+		??
+
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
@@ -59,10 +62,7 @@
 </script>
 
 </head>
-<body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">
-
-2번이 수정한 내용<br>
-asdfadsfasdf
+<body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">+
 
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
