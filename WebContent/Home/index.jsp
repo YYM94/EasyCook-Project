@@ -63,8 +63,6 @@
 
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
-나 바뀜.
-
 <div id="main_logo" class="content">
 	<img id="main_img" src="./images/index_logo.jpg"/>
 	<img id="main_logoimg" src="./images/logo.png"/>
