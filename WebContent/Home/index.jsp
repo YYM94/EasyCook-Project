@@ -64,6 +64,9 @@
 </head>
 <body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">
 
+2번이 수정한 내용<br>
+asdfadsfasdf
+
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
 <div id="main_logo" class="content">
