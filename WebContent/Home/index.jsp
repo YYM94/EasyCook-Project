@@ -9,6 +9,10 @@
 <script src="./js/jquery.js"></script>
 <script>
 
+ㅁㄴㅇㄻㄴㅇㄹ
+
+ㅁㄴㅇㄻㄴㅇㄹ
+
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
@@ -60,8 +64,6 @@
 
 </head>
 <body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">+
-
-1111
 
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
