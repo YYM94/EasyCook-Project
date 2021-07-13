@@ -8,7 +8,11 @@
 <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 <script src="./js/jquery.js"></script>
 <script>
+<<<<<<< Updated upstream
 aasdasd
+=======
+1234
+>>>>>>> Stashed changes
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
