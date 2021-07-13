@@ -9,10 +9,6 @@
 <script src="./js/jquery.js"></script>
 <script>
 
-ㅁㄴㅇㄻㄴㅇㄹ
-
-ㅁㄴㅇㄻㄴㅇㄹ
-
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
