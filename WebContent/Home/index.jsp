@@ -64,6 +64,8 @@
 </head>
 <body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">+
 
+1111
+
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
 <div id="main_logo" class="content">
