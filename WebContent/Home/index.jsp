@@ -205,7 +205,7 @@
 			<div id="main_cucheon_cont_1" class="cucheon_form">
 				<div id="main_cucheon_cont_1_cont" class="food_img">
 					<div id="food_text_1" class="food_text">
-						<p class="food_title">사과</p>
+						<p class="food_title">감자</p>
 					</div>
 					<div id="food_img_cont_1" class="food_img_cont">
 						<span>감자는 비타민 C가 많다. 영양분은 껍질에 많기때문에 <br /> 
