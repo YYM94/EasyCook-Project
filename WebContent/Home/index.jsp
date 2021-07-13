@@ -9,6 +9,9 @@
 <script src="./js/jquery.js"></script>
 <script>
 
+1번이 수정한 내용<br>
+ㅁㄴㅇㄻㄴㅇㄹ
+
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
