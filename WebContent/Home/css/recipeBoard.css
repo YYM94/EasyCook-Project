@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
 body{
-	background: lime;
+	background: #98FB98;
+	margin: 0;
+	padding: 0;
 }
