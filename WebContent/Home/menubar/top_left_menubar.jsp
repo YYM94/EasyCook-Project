@@ -126,7 +126,7 @@
 				<img src="/EasyCook_Project/Home/images/left_menuclosebtn.png" width="40" height="40"/>
 			</div>
 			<div id="left_logo">
-				<a href="javascript:location.reload()"><img src="/EasyCook_Project/Home/images/logo.png"/></a>
+				<a href="/EasyCook_Project/Home/index.jsp"><img src="/EasyCook_Project/Home/images/logo.png"/></a>
 			</div>
 			<div id="left_sessionInfo">
 				로그인 정보
