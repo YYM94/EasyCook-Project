@@ -1,4 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
+<%--바뀌어라 제발~~~~~~ --%>
+
+<%@ page contentType="text/html; charset=UTF-8"%> 
 <!DOCTYPE html>
 <html>
 <head>
