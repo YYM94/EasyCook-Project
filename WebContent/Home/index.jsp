@@ -8,14 +8,13 @@
 <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 <script src="./js/jquery.js"></script>
 <script>
-1234
 //////////////////////////////페이지 초기화 ////////////////////////////////
 	function initPage(){
 		windowWheelEventRemove();
 		windowWheelEvent();
 	}
 /////////////////////////// 페이지 초기화 END ///////////////////////////////
-
+1234
 /////////////////////////// 페이지 스크롤 이벤트 //////////////////////////////
 	//윈도우 휠 이벤트 제거
 	function windowWheelEventRemove(){
