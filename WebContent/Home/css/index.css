@@ -66,6 +66,12 @@ body{
 
 /* 좌측 메뉴바 */
 #left_menubar{
+#main_Movebtn{
+	padding: 0;
+	width: 15px;
+	height: 105px;
+	margin-top: 20%;
+	margin-left: 97%;
 	position: fixed;
 	z-index: 2000; 
 }
@@ -102,6 +108,8 @@ body{
 	width: 100%;
 	height: 100px;
 	margin: 20px 0 0 0;
+#main_Movebtn img{
+	margin-top: 20px;
 	filter: drop-shadow(0 0 1px #000000);
 }
 #left_sessionInfo{
@@ -119,10 +127,12 @@ body{
 	margin: 10px 0 0 102%;
 }
 #left_menuclosebtn img:hover{
+#main_Movebtn img:hover{
 	filter: drop-shadow(0 0 8px #F90);
 	cursor: pointer;
 }
 #left_menuclosebtn img:active{
+#main_Movebtn img:action{
 	filter: drop-shadow(0 0 10px #FF6347);
 	cursor: pointer;
 }
