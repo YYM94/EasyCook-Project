@@ -74,7 +74,8 @@
 		$("#left_menubtn").click(function(){
 			$("#left_menu").animate({
 				width: "20%",
-				opacity: "1"
+				opacity: "1",
+				left: "0px"
 			});
 			$("#left_menubtn").animate({
 				opacity: "0"
@@ -87,7 +88,8 @@
 		$("#left_menuclosebtn").click(function(){
 			$("#left_menu").animate({
 				width: "0",
-				opacity: "0"
+				opacity: "0",
+				left: "-100px"
 			});
 			$("#left_menubtn").animate({
 				opacity: "1"
