@@ -1,5 +1,3 @@
-<%-- 테스트 성공한건가? --%>
-
 <%@ page contentType="text/html; charset=UTF-8"%> 
 <!DOCTYPE html>
 <html>
