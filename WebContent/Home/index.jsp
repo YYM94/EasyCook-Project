@@ -59,7 +59,7 @@
 </script>
 
 </head>
-<body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">+
+<body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">
 
 <%@ include file="./menubar/top_left_menubar.jsp"%>
 
