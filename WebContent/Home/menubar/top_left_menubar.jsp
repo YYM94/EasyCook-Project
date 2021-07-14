@@ -107,7 +107,7 @@
 	<div id="top_menubar">
 		<div id="top_login_join_btn">
 			<a href="#" id="top_loginbtn">Login</a>&nbsp;&nbsp;
-			<a href="#" id="top_joinbtn">Join</a>
+			<a href="./join.jsp" id="top_joinbtn">Join</a>
 		</div>
 		<div id="top_search">
 			<img id="top_search_icon" src="/EasyCook_Project/Home/images/top_search.png" width="30" height="30"/>

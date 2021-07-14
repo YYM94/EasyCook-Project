@@ -56,8 +56,14 @@ strong{
 #join_button{
 	width: 15%;
 	font-size: 1.5em;
+	background: silver;
 }
 
+#join_reset_button{
+	width: 15%;
+	font-size: 1.5em;
+	background: silver;
+}
 span{
 
 }
