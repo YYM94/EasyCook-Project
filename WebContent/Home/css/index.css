@@ -212,14 +212,14 @@ ul {font-size:0; max-height: 50%;}
 header ul > li {
    display:inline-block;
    vertical-align:top;
-   width: 25%;
-   margin: 0px 0px 0px 10%;
+   width: 35%;
+   margin: 0px 0px 0px 14%;
 }
 middle ul > li {
    display:inline-block;
    vertical-align:top;
-   width:26%;
-   margin: 0px 0px 0px 3%;
+   width:25%;
+   margin: 0px 0px 0px 6%;
 }
 .screen1 img, .screen2 img, .screen3 img, .screen4 img, .screen5 img {
 	height: 15%;
