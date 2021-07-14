@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.gong{
+	width:50%;
+	margin: 18% 0px 0px 25%;
+}
+/* 체크박스 표시 */
+input[id*="answer"]{
+	display:none;
+}
+/* 공지사항 메뉴바 */
+input[id*="answer"] + label{
+	display:block;
+	padding:20px;
+	border:1px solid #232188;
+	border-bottom:0;
+	color:#fff;
+	font-weight:900;
+	background:#c0c0c0;
+	cursor:pointer;
+	position:relative;
+	border-radius:10px;
+}
+input[id*="answer"] + label :hover{
+	text-decoration: underline; font-weight:bold; color:#F90;
+}
+
+/* 화살표 이미지 */
+input[id*="answer"] + label em{
+	position:absolute;
+	top:50%;
+	right:10px;
+	width:30px;
+	height:30px;
+	margin-top:-15px;
+	display:inline-block;
+	background:url('../picture/arrow.png') 0 0 no-repeat;
+}
+/* 공지사항 내용 */
+input[id*="answer"] + label + div{
+	max-height:0;
+	transition: all .35s;
+	overflow:hidden;
+	background:#ebf8ff;
+	font-size:11px;
+	border-radius:10px;
+	text-align:center;
+}
+
+/* 공지사항 내용 글자 */
+input[id*="answer"] + label + div p{
+	display:inline-block;
+	padding:20px;
+	border-radius:10px;
+	text-align:center;
+}
+input[id*="answer"]:checked + label + div {
+	max-height:100px;
+}
+
+input[id*="answer"]:checked + label em {
+	background-position:0 -30px;
+}
