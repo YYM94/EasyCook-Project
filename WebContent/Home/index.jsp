@@ -47,8 +47,34 @@
 				page--;
 			}
 			var posTop = (page-1) * $(window).height();
+			
+			//우측 버튼에 현재 페이지 표시
+			for(var i=1; i<=5; i++){
+				if(i == page){
+					document.getElementById("main_Move"+i).src="./images/mainMoveButtonActive.png";
+					continue;
+				}
+				document.getElementById("main_Move"+i).src="./images/mainMoveButton.png";
+			}
 			$html.animate({scrollTop : posTop});
 		});
+	}
+	
+	//우측 버튼 클릭 시 페이지 이동
+	function moveMainPage(btn){
+		var btnid = btn.substr(9,1);
+		
+		page = btnid;
+		var posTop = (page-1) * $(window).height();
+		$html.animate({scrollTop : posTop});
+
+		for(var i=1; i<=5; i++){
+			if(i == page){
+				document.getElementById("main_Move"+i).src="./images/mainMoveButtonActive.png";
+				continue;
+			}
+			document.getElementById("main_Move"+i).src="./images/mainMoveButton.png";
+		}
 	}
 	
 	//브라우저 크기 변경시 호출되는 이벤트
@@ -64,6 +90,14 @@
 <body style="overflow-x: hidden; overflow-y: hidden;" onload="initPage();">
 
 <%@ include file="./menubar/top_left_menubar.jsp"%>
+
+<div id="main_Movebtn">
+	<img id="main_Move1" src="./images/mainMoveButtonActive.png" width="11" height="12" onclick="moveMainPage(this.id)"/>
+	<img id="main_Move2" src="./images/mainMoveButton.png" width="11" height="12" onclick="moveMainPage(this.id)"/>
+	<img id="main_Move3" src="./images/mainMoveButton.png" width="11" height="12" onclick="moveMainPage(this.id)"/>
+	<img id="main_Move4" src="./images/mainMoveButton.png" width="11" height="12" onclick="moveMainPage(this.id)"/>
+	<img id="main_Move5" src="./images/mainMoveButton.png" width="11" height="12" onclick="moveMainPage(this.id)"/>
+</div>
 
 <div id="main_logo" class="content">
 	<img id="main_img" src="./images/index_logo.jpg"/>
