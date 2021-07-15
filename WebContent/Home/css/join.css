@@ -2,68 +2,75 @@
 
 #panel{
 	margin: auto;
-}
+	width: 50%;
+} /* 폼 전체 판 껍데기 */
 
-#panel-heading{
+#panel-body{
+	background: gray;
+	border-radius: 20px;
+	width: 70%;
+	margin-left: 15%;
+	margin-top: 10%;
+} /* 폼 전체 판 */
+
+#panel-header{
 	padding-top: 1.5%;
 	font-size: 300%;
 	text-align: center;
 	margin-top: 3%;
 	border: 1px solid lightgreen;
-}
+} /* 판 헤더 부분 (EasyCook! 회원가입) */
 
-#panel-body{
-	background: gray;
-	border-radius: 20px;
-}
+
 #panel-table{
 	padding: 3%; 
 	border: 1px solid orange;
-}
+} /* 판 내용물 */
+
+.join_title{
+	margin-bottom: 2%;
+} /* 각 항목 글자와 입력박스 클래스 (한줄씩) */
+
 strong{
-	margin-top: 0.5%;
+	margin-top: 1.5%;
 	margin-left: 5%;
 	float: left;
-	width: 20%;
-}
+	width: 25%;
+} /* 각 항목 왼쪽 글자영역 */
 
 .form-control{
 	height: 2.5em;
 	border: 1px solid #d9d9de;
-}
+	border-radius: 5px;
+} /* 각 항목 입력 박스 */
 
-.join_title{
-	margin-bottom: 2%;
-}
 
-#join_post_box_1{
-	float: left;
-}
+#join_id_box{
+	width: 25%;
+} /* 아이디 입력박스 */
 
-#join_addr_title{
-	width: 7%;
-	margin-left: 10%;
-}
+#join_post_box_2, #join_post_box_3{
+	margin-left: 30%;
+} /* 도로명,나머지상세주소 입력 박스*/
 
 #clear{
 	clear: both;
 }
 
+#join_post_btn{
+	width: 20%;
+	font-size: 1.0em;
+	border-radius: 10px;
+	background: salmon;
+} /* 우편번호 찾기 버튼 */
+
 #join_footer{
 	text-align: center;
-}
+} /* 판 제일 하단 가입,취소 버튼 영역*/
 
-#join_button{
+#join_button, #join_reset_button{
 	width: 15%;
-	font-size: 1.5em;
-	background: silver;
-}
-
-#join_reset_button{
-	width: 15%;
-	font-size: 1.5em;
-	background: silver;
-}
-span{
-
-}
+	font-size: 1.0em;
+	border-radius: 10px;
+	background: salmon;
+} /* 가입하기,취소 버튼 */
