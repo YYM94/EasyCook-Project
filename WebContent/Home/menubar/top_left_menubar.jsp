@@ -139,7 +139,7 @@
 					<a href="/EasyCook_Project/Home/recipeBoard/recipeBoard_view.jsp">레시피 게시판</a>
 				</div>
 				<div id="left_news">
-					<a href="#">핫뉴스</a>
+					<a href="/EasyCook_Project/Home/hotNewsBoard/hotNewsBoard_view.jsp">핫뉴스</a>
 				</div>
 				<div id="left_faq">
 					<a href="#">FAQ</a>
