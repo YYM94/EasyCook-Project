@@ -21,7 +21,7 @@ body{
 	filter: drop-shadow(0 0 8px #F90);
 	cursor: pointer;
 }
-#main_Movebtn img:action{
+#main_Movebtn img:active{
 	filter: drop-shadow(0 0 10px #FF6347);
 	cursor: pointer;
 }
@@ -51,15 +51,19 @@ body{
 /* 임시 페이지 */
 #temp_top5{
 	background-color: #FFA07A;
+	overflow: hidden;
 }
 #temp_news{
 	background-color: #FAFAD2;
+	overflow: hidden;
 }
 #temp_ingr{
 	background-color: #00FF7F;
+	overflow: hidden;
 }
 #temp_footer{
 	background-color: #4169E1;
+	overflow: hidden;
 }
 
 

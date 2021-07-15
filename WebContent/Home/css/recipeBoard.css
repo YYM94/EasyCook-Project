@@ -4,31 +4,90 @@ body{
 	background: #98FB98;
 	margin: 0;
 	padding: 0;
+	background-image: url("../images/recipeBoardBackground.jpg");
+	background-size: 100% 100vh;
+	background-repeat: repeat-y;
 }
 
+/*게시글 조회 영역*/
 #RecipieSearchPage{
 	float: left;
 	width: 1200px;
 	height: 600px;
 	margin: 100px 0 0 150px;
-	
-	border: 2px solid yellow;
+}
+#Board_blur{
+	position: absolute;
+	width: 1200px;
+	height: 600px;
+	background-color: #252525;
+	opacity: 0.3;
+	z-index: 100;
+	border-radius: 15px;
 }
 
+/*게시글*/
 #Board_Recipies{
 	position: relative;
 	width: 100%;
 	height: 90%;
-	
-	border: 1px solid black;
+	z-index: 200;
+}
+.BoardPostings{
+	float: left;
+	width: 270px;
+	height: 235px;
+	margin: 15px;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+}
+.BoardPostThumbnail{
+	position: absolute;
+	opacity: 0.3;
+	width: 270px;
+	height: 235px;
+	background-image: url("../images/recipePostBasicThumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+	border-radius: 15px;
+}
+.BoardPostTitle{
+	position: absolute;
+	margin: 25px 15px 0px 15px;
+	width: 240px;
+    height: 29px;
+    color: #252525;
+    font-size: 1.3em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+	z-index: 300;
+}
+.BoardPostCont{
+	position: absolute;
+	margin: 80px 15px 0px 15px;
+	width: 240px;
+	height: 130px;
+    color: #252525;
+    font-size: 1em;
+	word-wrap: break-word;
+	display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+	overflow: hidden;
+	z-index: 300;
 }
 
-#bottonPageNumber{
+/*하단 페이지 번호*/
+
+#bottomPageNumber{
 	position: relative;
 	width: 520px;
 	height: 25px;
 	margin: 10px 0 0 30%;
 	align-content: center;
+	z-index: 300;
 }
 
 .PageNumber{
@@ -37,6 +96,15 @@ body{
 	height: 25px;
 	text-align: center;
 	margin-left: 5px;
-	
+	filter: drop-shadow(0 0 1px #FFFFFF);
 	border: 1px solid white;
+	border-radius: 5px;
+}
+.PageNumber:hover{
+	border: 1px solid #FF6347;
+	filter: drop-shadow(0 0 1px #FF6347);
+}
+.PageNumber img{
+	width: 100%;
+	height: 100%;
 }
