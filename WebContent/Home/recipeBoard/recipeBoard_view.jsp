@@ -82,14 +82,14 @@ if(request.getParameter("page") == null){
 		<%
 		}
 		%>
-		<a href="recipeBoard_view.jsp?page=<%=pages%>">
-			<span class="PageNumber">
-				${">>"}
-			</span>
-		</a>
 		<a href="recipeBoard_view.jsp?page=<%=currentPage+1%>">
 			<span class="PageNumber">
 				${">"}
+			</span>
+		</a>
+		<a href="recipeBoard_view.jsp?page=<%=pages%>">
+			<span class="PageNumber">
+				${">>"}
 			</span>
 		</a>
 	</div>
