@@ -14,6 +14,11 @@ $(window).resize(function(){
 			SearchPageMargin = 0;
 		}
 		$("#RecipieSearchPage").css("margin-left", SearchPageMargin);
+		$("#PostingViewPage").css("margin-left", SearchPageMargin+200);
+	}
+	if($(window).width() >= 1350){
+		$("#RecipieSearchPage").css("margin-left", 150);
+		$("#PostingViewPage").css("margin-left", 350);
 	}
 });
 
