@@ -30,9 +30,28 @@ if(request.getParameter("page") == null){
 }else{
 	currentPage = Integer.parseInt(request.getParameter("page"));
 }
+
+//현재 조회중인 게시글 번호
+int currentPosting;
+if(request.getParameter("post") == null){
+	currentPosting = 0;
+}else{
+	currentPosting = Integer.parseInt(request.getParameter("post"));
+}
 %>
 
 <%@ include file="../menubar/top_left_menubar.jsp"%>
+
+<%-- 게시글 조회 영역, currentPost가 0일 경우 표시하지 않음 --%>
+<%if(currentPosting != 0){ %>
+	<div id="PostingViewPage">
+		<div id="PostingTitle">
+			<%=currentPosting %>번째 게시글 제목
+		</div>
+	</div>
+<%} %>
+
+<%-- 게시글 검색 영역 --%>
 <div id="RecipieSearchPage">
 
 	<div id="Board_blur"></div>
@@ -47,7 +66,7 @@ if(request.getParameter("page") == null){
 		}
 		for(int i=startPosting; i<=lastPosting; i++){ 
 		%>
-			<a href="#">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=totalPages-i+1%>">
 				<span class="BoardPostings">
 					<span class="BoardPostThumbnail"></span>
 					<span class="BoardPostTitle"><%=totalPages-i+1 %>번째 게시글의 제목 : 요리(料理, Cooking)는 먹기 좋게 가공한 음식이나 가공 행위 자체를 의미한다.</span>
@@ -83,7 +102,7 @@ if(request.getParameter("page") == null){
 			lastPage = pages;
 		}
 		%>
-		<a href="recipeBoard_view.jsp?page=<%=1%>">
+		<a href="recipeBoard_view.jsp?page=<%=1%>&post=0">
 			<span class="PageNumber">
 				<img src="../images/PageMoveLeftEnd.png"/>
 			</span>
@@ -93,7 +112,7 @@ if(request.getParameter("page") == null){
 				<img src="../images/PageEnd.png"/>
 			</span>
 		<%}else{ %>
-			<a href="recipeBoard_view.jsp?page=<%=currentPage-1%>">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage-1%>&post=0">
 				<span class="PageNumber">
 					<img src="../images/PageMoveLeft.png"/>
 				</span>
@@ -102,7 +121,7 @@ if(request.getParameter("page") == null){
 		<%
 		for(int i=firstPage; i<=lastPage; i++){
 		%>
-			<a href="recipeBoard_view.jsp?page=<%=i%>">
+			<a href="recipeBoard_view.jsp?page=<%=i%>&post=0">
 				<%if(i == currentPage){ %>
 					<span class="PageNumber" style="color: #FF6347; font-weight: bold">
 						<%=i %>
@@ -121,13 +140,13 @@ if(request.getParameter("page") == null){
 				<img src="../images/PageEnd.png"/>
 			</span>
 		<%}else{ %>
-			<a href="recipeBoard_view.jsp?page=<%=currentPage+1%>">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage+1%>&post=0">
 				<span class="PageNumber">
 					<img src="../images/PageMoveRight.png"/>
 				</span>
 			</a>
 		<%} %>
-		<a href="recipeBoard_view.jsp?page=<%=pages%>">
+		<a href="recipeBoard_view.jsp?page=<%=pages%>&post=0">
 			<span class="PageNumber">
 				<img src="../images/PageMoveRightEnd.png"/>
 			</span>

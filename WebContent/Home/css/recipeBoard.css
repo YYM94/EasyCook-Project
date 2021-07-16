@@ -9,12 +9,33 @@ body{
 	background-repeat: repeat-y;
 }
 
-/*게시글 조회 영역*/
+/*게시글 조회 페이지*/
+#PostingViewPage{
+	width: 780px;
+	padding: 10px;
+	margin-left: 350px;
+	margin-bottom: 100px;
+	position: relative;
+	top: 150px;
+	background-color: #FFFAFA;
+	border-radius: 15px;
+}
+#PostingTitle{
+	text-align: center;
+	position: relative;
+    font-size: 1.6em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+/*게시글 검색 영역*/
 #RecipieSearchPage{
 	float: left;
 	width: 1200px;
 	height: 600px;
-	margin: 100px 0 0 150px;
+	margin: 100px 0 80px 150px;
 }
 #Board_blur{
 	position: absolute;
@@ -26,7 +47,7 @@ body{
 	border-radius: 15px;
 }
 
-/*게시글*/
+/*검색된 게시글*/
 #Board_Recipies{
 	position: relative;
 	width: 100%;
