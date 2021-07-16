@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+#join_body{
+	margin: 0px;
+}
+
 #panel{
 	margin: auto;
 	width: 50%;
@@ -108,11 +112,20 @@ strong{
 }
 
 #join_post_btn{
-	width: 20%;
-	font-size: 1.0em;
+	width: 22%;
+	font-size: 1.1em;
 	border-radius: 10px;
 	background: salmon;
+	font-weight: bolder;
 } /* 우편번호 찾기 버튼 */
+
+#join_post_btn:hover{
+	color: white;
+}
+
+#join_post_btn:active{
+	color: lightgreen;
+}
 
 #join_footer{
 	text-align: center;
@@ -120,7 +133,18 @@ strong{
 
 #join_button, #join_reset_button{
 	width: 15%;
-	font-size: 1.0em;
+	font-size: 1.2em;
 	border-radius: 10px;
 	background: salmon;
+	font-weight: bolder;
 } /* 가입하기,취소 버튼 */
+
+#join_button:hover, #join_reset_button:hover{
+	color: white;
+	cursor: pointer;
+}
+
+#join_button:active, #join_reset_button:active {
+	color: lightgreen;
+	cursor: pointer;
+}
