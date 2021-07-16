@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ 게시판</title>
-<link rel="stylesheet" href="css/FAQ.css" type="text/css" />
+<link rel="stylesheet" href="../css/FAQ.css" type="text/css" />
 </head>
 <body>
 	<div class="FAQ">

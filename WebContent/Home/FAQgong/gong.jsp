@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="css/gong.css" type="text/css" />
+<link rel="stylesheet" href="../css/gong.css" type="text/css" />
 </head>
 <body>
 	<div class="gong">
