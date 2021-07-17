@@ -36,7 +36,7 @@
 	/* 아이디,비밀번호 유효성 검증 */
 </script>
 </head>
-<body onLoad="$('#join_id_box').focus();">
+<body onLoad="$('#join_id_box').focus();" id="join_body">
 	<div id="container">
 		<div id="panel">
 			<div id="panel-body">
