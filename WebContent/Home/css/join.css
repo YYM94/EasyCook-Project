@@ -25,6 +25,23 @@
 	border: 1px solid lightgreen;
 } /* 판 헤더 부분 (EasyCook! 회원가입) */
 
+#join_header_title_1{
+	font-weight: bold;
+}
+
+#join_header_title_1:link{
+	text-decoration: none;
+	color: black;
+}
+
+#join_header_title_1:visited{
+	text-decoration: none;
+	color: black;
+}
+
+#join_header_title_2:hover{
+	cursor: default;
+}
 
 #panel-table{
 	padding: 3%; 
@@ -117,9 +134,11 @@ strong{
 	border-radius: 10px;
 	background: salmon;
 	font-weight: bolder;
+	cursor: pointer;
 } /* 우편번호 찾기 버튼 */
 
 #join_post_btn:hover{
+	cursor: pointer;
 	color: white;
 }
 
