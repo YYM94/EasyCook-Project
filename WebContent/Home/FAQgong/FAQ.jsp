@@ -97,10 +97,10 @@ if (request.getParameter("page") == null) {
 	%>
 	<a href="FAQ.jsp?page=<%=i%>"> <%
  	if (i == currentPage) {
- %> <span class="pageNum" style="color: #ffffff; font-weight: bold"><%=i%></span>
+ %> <span class="pageNum" style="color: #ffff00; font-weight: bold"><%=i%></span>
 		<%
 			} else {
-		%> <span class="pageNum" style="color: #252525;"><%=i%></span> <%
+		%> <span class="pageNum" style="color: #ffffff;"><%=i%></span> <%
  	}
  %>
 	</a>
