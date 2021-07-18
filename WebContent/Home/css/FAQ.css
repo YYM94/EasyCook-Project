@@ -1,4 +1,7 @@
 @charset "UTF-8";
+a{
+	text-decoration: none;
+}
 body{
 	background-color:beige;
 }
@@ -60,4 +63,23 @@ input[id*="FAQ"]:checked + label + div {
 
 input[id*="FAQ"]:checked + label em {
 	background-position:0 -30px;
+}
+#bottomPage{
+	position: relative;
+	width: 520px;
+	height: 25px;
+	margin: 10px 0 0 47%;
+	align-content: center;
+	z-index: 300;
+}
+#bottomPage .pageNum{
+	border:1px solid #123867;
+	background:#123867;
+	color:#fff;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	
 }

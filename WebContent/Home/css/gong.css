@@ -1,4 +1,8 @@
 @charset "UTF-8";
+a{
+	text-decoration: none;
+}
+
 body{
 	background-color:beige;
 }
@@ -39,7 +43,7 @@ input[id*="answer"] + label em{
 	height:30px;
 	margin-top:-15px;
 	display:inline-block;
-	background:url('../images/picture/arrow.png') 0 0 no-repeat;
+	background:url('../picture/arrow.png') 0 0 no-repeat;
 }
 /* 공지사항 내용 */
 input[id*="answer"] + label + div{
@@ -64,4 +68,33 @@ input[id*="answer"]:checked + label + div {
 
 input[id*="answer"]:checked + label em {
 	background-position:0 -30px;
+}
+
+.paging .current2{
+	display:inline-block;
+	width:30px; height:30px; line-height:28px;
+	border:1px solid #cccccc;
+	border:1px solid #123867;
+	background:#123867; color:#fff;
+	text-align:center;
+	cursor:pointer;
+}
+#bottomPage{
+	position: relative;
+	width: 520px;
+	height: 25px;
+	margin: 10px 0 0 47%;
+	align-content: center;
+	z-index: 300;
+}
+#bottomPage .pageNum{
+	border:1px solid #123867;
+	background:#123867;
+	color:#fff;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	text-align:center;
+	line-height:30px;
+	
 }
