@@ -14,6 +14,7 @@
 		$('#login_find_id_text').click(function() {
 			$('#panle_body_login').hide();
 			$('#login_find_id').show();
+			$('#login_find_id_q_a').focus();
 		});
 	}
 	
@@ -22,15 +23,24 @@
 		$('#login_find_pwd_text').click(function(){
 			$('#panle_body_login').hide();
 			$('#login_find_pwd').show();
+			$('#login_find_pwd_id_text').focus();
 		});
 	}
 
+/* 아이디 찾기 영역에서 버튼 클릭시 하단에 아이디 보여주기   // 가입시 입력한 질문과 전화번호가 일치해야 됨.(추가해야함..) // 입력한 값이 맞지않을때 나오는 영역 추가해야함..*/
 	function FindViewID(){
 		$('#login_find_button_id').click(function(){			
 			$('#login_find_id_real').show();
 		});
 	}
-	
+
+/* 비밀번호 재설정 영역에서 비밀번호 재설정 버튼 클릭시 알림창 띄우기 */
+	function RePWD(){ /*아이디와 질문 답 맞는지 확인후 맞다면 알림창 띄우고 로그인페이지로 이동하는 함수 추가해야함 */
+		alert('비밀번호 재설정이 완료되었습니다. \n로그인 페이지로 이동합니다.');
+		location.href='login.jsp';
+}
+
+
 </script>
 </head>
 <body id="login_body" onLoad="$('#login_id_box').focus();">
@@ -62,7 +72,7 @@
 								maxlength="20" placeholder="비밀번호를 입력하세요." />
 						</div>
 
-						<div id="login_footer" class="login_title">
+						<div id="login_footer">
 							<!-- 로그인폼 하단 로그인/회원가입 버튼 영역 -->
 							<input type="submit" value="로그인" id="login_button" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<input type="button" value="회원가입" id="join_button_login" onclick="location='join.jsp';" />
@@ -71,18 +81,18 @@
 					</div>
 				</form>
 				<div id="login_find">
-					<a id="login_find_id_text" onclick="LoginFindID()">
-						<b>아이디 찾기</b>
+					<a id="login_find_id_text">
+						<b onclick="LoginFindID()">아이디 찾기</b>
 					</a>
 				
-					<a id="login_find_pwd_text" onclick="LoginFindPWD()">
-						<b>비밀번호 찾기</b>
+					<a id="login_find_pwd_text">
+						<b onclick="LoginFindPWD()">비밀번호 재설정</b>
 					</a>
 				</div>
 			</div>
 			
 			<div id="clear"></div>
-			
+			<!-- 아이디 찾기 영역 -->
 			<div id="login_find_id">
 				<div id="login_find_id_header">
 					<a href="./index.jsp"><span>EasyCook!</span></a><span
@@ -123,7 +133,7 @@
 
 				<div id="login_find_pwd_header">
 					<a href="./index.jsp"><span>EasyCook!</span></a><span
-						id="login_find_pwd_title"> 비밀번호 찾기</span>
+						id="login_find_pwd_title"> 비밀번호 재설정</span>
 				</div>
 
 				<div id="login_find_pwd_table">
@@ -140,7 +150,7 @@
 					</div>
 
 					<div id="login_find_pwd_tel">
-						<b id="find_tel_pwd"><label for="login_find_pwd_tel_box">비밀번호</label></b>
+						<b id="find_tel_pwd"><label for="login_find_pwd_tel_box">새로운 비밀번호</label></b>
 						<input type="text" name="login_find_pwd_tel"
 							id="login_find_pwd_tel_box" class="login_control" />
 					</div>
@@ -152,9 +162,7 @@
 					</div>
 										
 					<div id="login_find_button_pwd">
-						<div id="login_find_button_pwd">
-							<button id="login_find_button_pwd_title">비밀번호 재설정</button>
-						</div>
+						<button onclick="RePWD()" id="login_find_button_pwd_title">비밀번호 재설정</button>
 					</div>
 				</div>
 

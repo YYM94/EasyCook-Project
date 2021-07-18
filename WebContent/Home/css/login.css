@@ -2,21 +2,30 @@
 
 #login_body{
 	margin: 0px;
-	margin-left: 10%;
 	margin-top: 10%;
+	-webkit-animation: fadein 1000ms ease-out;
 }
 
 #panel_login{
-	margin: auto;
+	margin: 0 auto;
 	width: 50%;
+	margin-left: 32%;
 }
 
 #panle_body_login{
-	background: gray;
+	background: peachpuff;
 	border-radius: 20px;
 	width: 70%;
-	margin-left: 15%;
 	margin-top: 10%;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 #panel_header_login{
@@ -68,10 +77,6 @@ strong{
 	border-radius: 5px;	
 }
 
-/* #login_id{
-	margin-top: 10%;
-}
- */
 #login_id_box{
 	width: 35%;
 }
@@ -83,7 +88,6 @@ strong{
 #login_footer{
 	text-align: center;
 	border: 1px solid blue;
-	margin-bottom: 0%;
 }
 
 #login_button, #join_button_login{
@@ -91,7 +95,6 @@ strong{
 	font-size: 1.5em;
 	border-radius: 10px;
 	background: salmon;
-	margin-top: 5%;
 	font-weight: 500;
 }
 
@@ -115,6 +118,7 @@ strong{
 #login_find{
 	text-align: center;
 	border: 1px solid red;
+	padding-bottom: 2%;
 }
 
 #login_find_id_text:hover, #login_find_pwd_text:hover{
@@ -124,20 +128,20 @@ strong{
 }
 
 #login_find_id_text{
-	margin-right: 10%;
+	margin-left: 5%;
+}
+
+#login_find_pwd_text{
+	margin-left: 17%;
 }
 
 #login_find_id {
-	text-align: center;
 	margin-bottom: 5%;
 	border-radius: 20px;
 	display: none;
 	width: 70%;
-	margin-left: 15%;
 	margin-top: 10%;
-	background: pink;
-	padding-top: 1.5%;
-	padding-bottom: 5%;
+	background: lightpink;
 }
 
 #login_find_id_header{
@@ -145,7 +149,6 @@ strong{
 	font-size: 300%;
 	text-align: center;
 	border: 1px solid lightgreen;	
-	padding-top: 0%;
 }
 
 #login_find_id_header a{
@@ -166,16 +169,20 @@ strong{
 }
 
 #login_find_id_table{
-	margin-top: 5%;
 	border: 2px solid yellow;
+	padding: 3%;
 }
 
 #login_find_id_q{
 	margin-bottom: 5%;
 }
 
+#login_find_id_tel{
+	margin-bottom: 5%;
+}
+
 #find_q {
-	margin-top: 0.5%;
+	margin-top: 1%;
 	margin-left: 7%;
 	float: left;
 	width: 35%;
@@ -183,7 +190,7 @@ strong{
 }
 
 #find_tel{
-	margin-top: 0.5%;
+	margin-top: 1%;
 	margin-left: 7%;
 	float: left;
 	width: 35%;
@@ -202,13 +209,13 @@ strong{
 
 #login_find_button{
 	text-align: center;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	border: 1px solid blue;
+	margin-bottom: 0%;
 }
 
 #login_find_button_id{
 	float: left;
-	margin-left: 20%;
+	margin-left: 23%;
 }
 
 #login_find_button_id_title:hover, #login_find_button_login_title:hover{
@@ -224,11 +231,13 @@ strong{
 #login_find_id_real{
 	background: aqua;
 	display: none;
+	text-align: center;
+	margin-top: 3%;
 }
 
 
 #login_find_button_id_title{
-	font-size: 1.1em;
+	font-size: 1.2em;
 	border-radius: 10px;
 	background: salmon;
 	font-weight: 400;
@@ -268,8 +277,8 @@ strong{
 }
 
 #login_find_pwd_table{
-	margin-top: 5%;
-	border: 2px solid yellow;
+	border: 2px solid orange;
+	padding: 3%;
 }
 
 #login_find_pwd_id{
@@ -308,6 +317,7 @@ strong{
 
 #login_find_button_pwd{
 	text-align: center;
+	border: 1px solid blue;
 }
 
 
@@ -323,19 +333,16 @@ strong{
 
 
 #login_find_pwd {
-	text-align: center;
 	margin-bottom: 5%;
 	border-radius: 20px;
 	display: none;
 	width: 70%;
-	margin-left: 15%;
 	margin-top: 10%;
-	background: lime;
-	padding-bottom: 5%;
+	background: beige;
 }
 
 #login_find_button_pwd_title{
-	font-size: 1.1em;
+	font-size: 1.2em;
 	border-radius: 10px;
 	background: salmon;
 	font-weight: 400;
