@@ -133,7 +133,7 @@
 			</div>
 			<div id="left_menulink">
 				<div id="left_notice">
-					<a href="#">공지사항</a>
+					<a href="../FAQgong/gong.jsp">공지사항</a>
 				</div>
 				<div id="left_board">
 					<a href="/EasyCook_Project/Home/recipeBoard/recipeBoard_view.jsp">레시피 게시판</a>
@@ -142,7 +142,7 @@
 					<a href="/EasyCook_Project/Home/hotNewsBoard/hotNewsBoard_view.jsp">핫뉴스</a>
 				</div>
 				<div id="left_faq">
-					<a href="#">FAQ</a>
+					<a href="../FAQgong/FAQ.jsp">FAQ</a>
 				</div>
 			</div>
 		</div>
