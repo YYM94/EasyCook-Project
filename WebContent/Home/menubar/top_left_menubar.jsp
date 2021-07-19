@@ -106,8 +106,8 @@
 	
 	<div id="top_menubar">
 		<div id="top_login_join_btn">
-			<a href="./login.jsp" id="top_loginbtn">Login</a>&nbsp;&nbsp;
-			<a href="./join.jsp" id="top_joinbtn">Join</a>
+			<a href="/EasyCook_Project/Home/login.jsp" id="top_loginbtn">Login</a>&nbsp;&nbsp;
+			<a href="/EasyCook_Project/Home/join.jsp" id="top_joinbtn">Join</a>
 		</div>
 		<div id="top_search">
 			<img id="top_search_icon" src="/EasyCook_Project/Home/images/top_search.png" width="30" height="30"/>
@@ -133,7 +133,7 @@
 			</div>
 			<div id="left_menulink">
 				<div id="left_notice">
-					<a href="../FAQgong/gong.jsp">공지사항</a>
+					<a href="/EasyCook_Project/Home/FAQgong/gong.jsp">공지사항</a>
 				</div>
 				<div id="left_board">
 					<a href="/EasyCook_Project/Home/recipeBoard/recipeBoard_view.jsp">레시피 게시판</a>
@@ -142,7 +142,7 @@
 					<a href="/EasyCook_Project/Home/hotNewsBoard/hotNewsBoard_view.jsp">핫뉴스</a>
 				</div>
 				<div id="left_faq">
-					<a href="../FAQgong/FAQ.jsp">FAQ</a>
+					<a href="/EasyCook_Project/Home/FAQgong/FAQ.jsp">FAQ</a>
 				</div>
 			</div>
 		</div>
