@@ -106,7 +106,7 @@
 	
 	<div id="top_menubar">
 		<div id="top_login_join_btn">
-			<a href="#" id="top_loginbtn">Login</a>&nbsp;&nbsp;
+			<a href="./login.jsp" id="top_loginbtn">Login</a>&nbsp;&nbsp;
 			<a href="./join.jsp" id="top_joinbtn">Join</a>
 		</div>
 		<div id="top_search">

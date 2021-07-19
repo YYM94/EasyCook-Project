@@ -33,6 +33,15 @@
 		}
 	}
 	
+	/* 회원가입 창에서 [취소]버튼 클릭시 알림창 띄우기 */
+	function joinreset(){
+		if(confirm("회원가입을 [취소]하시겠습니까?\n입력한 값이 모두 초기화 됩니다.")){
+			form.reset();
+		}else{
+			return false;
+		}
+	}
+	
 	/* 아이디,비밀번호 유효성 검증 */
 </script>
 </head>
@@ -40,9 +49,9 @@
 	<div id="container">
 		<div id="panel">
 			<div id="panel-body">
-				<form action="join_ok.jsp" method="post" name="reg_form" onsubmit="return joinConfirm();" style="margin-bottom: 0;">
+				<form action="join_ok.jsp" method="post" name="reg_form" onsubmit="return joinConfirm();" onreset="return joinreset();" style="margin-bottom: 0;">
 					<div id="panel-header">
-						<span>EasyCook! 회원가입</span>
+						<a href="./index.jsp" id="join_header_title_1"><span>EasyCook!</span></a><span id="join_header_title_2"> 회원가입</span>
 					</div>
 					<div id="panel-table">
 						<div id="join_id" class="join_title">
