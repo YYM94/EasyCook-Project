@@ -19,7 +19,7 @@
     <div class="hotNews_hyper" onclick="window.open('http://www.google.co.kr');">
     <li>
       <div class="img_wrap">	
-      <img class="hotNews_img" src="../images/ohmy.jpg" />
+      <img class="hotNews_img" src="../images/from.jpg" />
       </div>
       <p>기사제목 : 페이지창 어떻게만듦?대박이네 나도빨리만들고싶어 하지만너무 어렵겠지?</p>
     </li>
