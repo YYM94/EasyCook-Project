@@ -106,8 +106,12 @@
 	
 	<div id="top_menubar">
 		<div id="top_login_join_btn">
-			<a href="/EasyCook_Project/Home/login.jsp" id="top_loginbtn">Login</a>&nbsp;&nbsp;
-			<a href="/EasyCook_Project/Home/join.jsp" id="top_joinbtn">Join</a>
+			<a href="/EasyCook_Project/Home/login.jsp">Login</a>&nbsp;&nbsp;
+			<a href="/EasyCook_Project/Home/join.jsp">Join</a>
+			<br>
+			<a href="#">마이페이지</a>
+			<br>
+			<a href="#">관리자 페이지</a>
 		</div>
 		<div id="top_search">
 			<img id="top_search_icon" src="/EasyCook_Project/Home/images/top_search.png" width="30" height="30"/>

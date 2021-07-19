@@ -8,7 +8,7 @@
 
 <%--페이지가 작아지면 게시판을 왼쪽에 붙임--%>
 $(window).resize(function(){
-	if($(window).width() < 1350){
+	if($(window).width() < 1550){
 		var SearchPageMargin = $(window).width()-1200;
 		if(SearchPageMargin < 0){
 			SearchPageMargin = 0;
@@ -16,9 +16,9 @@ $(window).resize(function(){
 		$("#RecipieSearchPage").css("margin-left", SearchPageMargin);
 		$("#PostingViewPage").css("margin-left", SearchPageMargin+200);
 	}
-	if($(window).width() >= 1350){
-		$("#RecipieSearchPage").css("margin-left", 150);
-		$("#PostingViewPage").css("margin-left", 350);
+	if($(window).width() >= 1550){
+		$("#RecipieSearchPage").css("margin-left", 350);
+		$("#PostingViewPage").css("margin-left", 550);
 	}
 });
 
