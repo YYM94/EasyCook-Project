@@ -43,60 +43,58 @@ if (request.getParameter("page") == null) {
 		}
 		for (int i = startPosting; i <= lastPosting; i++) {
 		%>
-		<a href="#">
 			<div class="gong">
-				<input type="radio" name="gong" id="answer01"> <label
+				<input type="checkbox" id="answer01"> <label
 					for="answer01">2021.07.15 [공지사항]<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer02"> <label
+				<input type="checkbox" id="answer02"> <label
 					for="answer02">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer03"> <label
+				<input type="checkbox" id="answer03"> <label
 					for="answer03">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer04"> <label
+				<input type="checkbox" id="answer04"> <label
 					for="answer04">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer05"> <label
+				<input type="checkbox" id="answer05"> <label
 					for="answer05">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer06"> <label
+				<input type="checkbox" id="answer06"> <label
 					for="answer06">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer07"> <label
+				<input type="checkbox" id="answer07"> <label
 					for="answer07">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer08"> <label
+				<input type="checkbox" id="answer08"> <label
 					for="answer08">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer09"> <label
+				<input type="checkbox" id="answer09"> <label
 					for="answer09">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
-				<input type="radio" name="gong" id="answer10"> <label
+				<input type="checkbox" id="answer10"> <label
 					for="answer10">공지사항<em></em></label>
 				<div>
 					<p>우리는 프로젝트 중입니다.</p>
 				</div>
 			</div>
-		</a>
 		<%
 			}
 		%>
