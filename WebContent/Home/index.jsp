@@ -132,12 +132,12 @@
             </a></li>
             <li><a href="">
                   <div class="screen3">
-                     <div class="top">감자조림의 레시피가 궁금하시다면?</div>
+                     <div class="top">계란장조림의 레시피가 궁금하시다면?</div>
                      <div class="bottom">알려드립니다!</div>
-                     <img src="./images/picture/gamja.jpg">
+                     <img src="./images/picture/egg1.jpg">
                   </div>
                   <div>
-                     <h3>3위:달콤짭잘 감자조림</h3>
+                     <h3>3위:햄 메추리알조림</h3>
                   </div>
             </a></li>
          </ul>
