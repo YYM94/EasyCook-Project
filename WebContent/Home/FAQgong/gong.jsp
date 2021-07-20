@@ -5,7 +5,7 @@
 <script src="./js/jquery.js"></script>
 
 
-
+<%@ include file="../menubar/top_left_menubar.jsp"%>
 <%
 	//하단 페이지 번호 생성을 위한 전체 게시글 수 검색
 int totalPages = 3;

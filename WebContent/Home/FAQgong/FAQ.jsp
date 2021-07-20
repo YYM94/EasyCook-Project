@@ -3,7 +3,7 @@
 <title>FAQ</title>
 <link rel="stylesheet" type="text/css" href="../css/FAQ.css" />
 <script src="./js/jquery.js"></script>
-
+<%@ include file="../menubar/top_left_menubar.jsp"%>
 
 
 <%
