@@ -11,18 +11,22 @@
 
 /* 아이디 찾기  클릭시 아이디찾기 화면 띄우기 */
 	function LoginFindID() {
-		$('#login_find_id_text').click(function() {
-			$('#panle_body_login').hide();
-			$('#login_find_id').show();
-			$('#login_find_id_q_a').focus();
+/* 			var up;
+			up=$('#login_find_id');
+			up.offset().top; */ /*아이디 찾기 클릭시 로그인영역 페이지 상단으로 위치 옮기기.. 예정..*/
+		$('#login_find_id_text').off('click').click(function() {
+  			$('#login_find_pwd').hide();
+			$('#login_find_id').fadeToggle();
+ 			$('#login_find_id_q_a').focus(); 
 		});
 	}
 	
+	
 /* 비밀번호 찾기  클릭시 비밀번호찾기 화면 띄우기 */
 	function LoginFindPWD(){
-		$('#login_find_pwd_text').click(function(){
-			$('#panle_body_login').hide();
-			$('#login_find_pwd').show();
+		$('#login_find_pwd_text').off('click').click(function(){
+			$('#login_find_id').hide();
+			$('#login_find_pwd').fadeToggle();
 			$('#login_find_pwd_id_text').focus();
 		});
 	}
