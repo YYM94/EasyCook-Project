@@ -11,9 +11,9 @@ body{
 
 /*게시글 조회 페이지*/
 #PostingViewPage{
-	width: 780px;
+	width: 880px;
 	padding: 10px;
-	margin-left: 550px;
+	margin-left: 500px;
 	margin-bottom: 100px;
 	position: relative;
 	top: 150px;
@@ -28,6 +28,9 @@ body{
     white-space: nowrap;
     overflow: hidden;
     border-bottom: 2px solid black;
+}
+#PostingVideo{
+	margin: 10px 0 10px 0;
 }
 
 /*게시글 검색 영역*/

@@ -14,11 +14,11 @@ $(window).resize(function(){
 			SearchPageMargin = 0;
 		}
 		$("#RecipieSearchPage").css("margin-left", SearchPageMargin);
-		$("#PostingViewPage").css("margin-left", SearchPageMargin+200);
+		$("#PostingViewPage").css("margin-left", SearchPageMargin+150);
 	}
 	if($(window).width() >= 1550){
 		$("#RecipieSearchPage").css("margin-left", 350);
-		$("#PostingViewPage").css("margin-left", 550);
+		$("#PostingViewPage").css("margin-left", 500);
 	}
 });
 
@@ -43,6 +43,11 @@ if(request.getParameter("post") == null){
 }else{
 	currentPosting = Integer.parseInt(request.getParameter("post"));
 }
+
+
+//게시글 영상 링크를 가공해서 가져옴
+String videoID = "kR77WlHRZrs";
+String youtubeLink = "https://www.youtube.com/embed/" + videoID;
 %>
 
 <%@ include file="../menubar/top_left_menubar.jsp"%>
@@ -52,6 +57,14 @@ if(request.getParameter("post") == null){
 	<div id="PostingViewPage">
 		<div id="PostingTitle">
 			<%=currentPosting %>번째 게시글 제목
+		</div>
+		
+		<div id="PostingVideo">
+			<iframe width="880" height="500" src="<%=youtubeLink %>" 
+				title="YouTube video player" frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen>
+			</iframe>
 		</div>
 	</div>
 <%} %>
