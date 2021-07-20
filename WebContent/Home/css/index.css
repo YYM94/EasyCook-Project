@@ -58,7 +58,8 @@ body{
 	overflow: hidden;
 }
 #temp_ingr{
-	background-color: #00FF7F;
+	background-image: url("../images/vegetable.jpg");
+	background-repeat: no-repeat;
 	overflow: hidden;
 }
 #temp_footer{
@@ -545,8 +546,8 @@ header hr{
 #main_cucheon_heading{
 	text-align: center;
 	padding: 20px;
-	margin-bottom: 50px;
-	background: aqua;
+	margin-bottom: 2%;
+	margin-top: 2%;
 } /* 추천재료 페이지 상단 영역*/
 
 .main_cucheon_cont_cont{
@@ -555,21 +556,22 @@ header hr{
 
 #cucheon_title{
 	font-size: 300%;
-	background: lightblue;
+	
 } /* 추천재료 페이지 상단 영역 제목 */
 
 #main_cucheon{
 	margin: auto;
 	border-radius: 20px;
 	width: 60%;
-	background: gray;
+	background: rgba(24, 26, 27, 0.5);
 	padding: 10px;
+	height: 70%;
 } /* 추천페이지 내용물 껍데기 */
 
 #main_cucheon_cont{
-	padding: 10px;
-	background: pink;
-	height: 500px;
+
+	height: 100%;
+
 } /* 추천페이지 게시글 */
 
 .cont_title{
@@ -583,9 +585,9 @@ header hr{
 #main_cucheon_cont_1{
 	width: 30%;
 	float: left;
-	background: orange;
 	margin-left: 3%;
 	margin-right: 2%;
+	margin-top: 5%;
 } /* 추천페이지 첫번째 게시글 폼 */
 
 
@@ -593,39 +595,38 @@ header hr{
 #main_cucheon_cont_2{
 	width: 30%;
 	float: left;
-	background: orange;
 	margin-right: 2%;
+	margin-top: 5%;
 }
 
 #main_cucheon_cont_3{
 	width: 30%;
 	float: left;
-	background: orange;
+	margin-top: 5%;
 }
 
 #main_cucheon_cont_4{
 	width: 30%;
 	float: left;
-	background: orange;
 	margin-left: 3%;
 	margin-right: 2%;
+	margin-top: 8%;
 } 
 
 #main_cucheon_cont_5{
 	width: 30%;
 	float: left;
-	background: orange;
 	margin-right: 2%;
+	margin-top: 8%;
 } 
 
 #main_cucheon_cont_6{
 	width: 30%;
 	float: left;
-	background: orange;
+	margin-top: 8%;
 } 
 .cucheon_form{
 	border-radius: 10px;
-	margin-top: 50px;
 }
 
 #main_cucheon_cont_1_cont{
