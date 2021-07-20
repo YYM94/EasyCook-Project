@@ -104,7 +104,7 @@
 
 <div id="temp_top5" class="content">
    <header>
-      <div class="h1">조회수 TOP5 게시판</div>
+      <div class="h1">조회수 TOP3 게시판</div>
       <hr/>
       <div class="gallerylist">
          <ul>
@@ -128,46 +128,19 @@
                      <h3>2위:마성의 매력 계란토스트</h3>
                   </div>
             </a></li>
-         </ul>
-      </div>
-   </header>
-   
-   <middle>
-      <div class="gallerylist">
-         <ul>
             <li><a href="">
                   <div class="screen3">
-                     <div class="top">감자조림의 레시피가 궁금하시다면?</div>
-                     <div class="bottom">알려드립니다!</div>
-                     <img src="./images/picture/gamja.jpg">
-                  </div>
-                  <div>
-                     <h3>3위:달콤짭잘 감자조림</h3>
-                  </div>
-            </a></li>
-            <li><a href="">
-                  <div class="screen4">
-                     <div class="top">새우구이의 레시피가 궁금하시다면?</div>
-                     <div class="bottom">알려드립니다!</div>
-                     <img src="./images/picture/shrimp.jpg">
-                  </div>
-                  <div>
-                     <h3>4위:새우를 제일 맛있게 먹는 방법</h3>
-                  </div>
-            </a></li>
-            <li><a href="">
-                  <div class="screen5">
-                     <div class="top">장조림의 레시피가 궁금하시다면?</div>
+                     <div class="top">계란장조림의 레시피가 궁금하시다면?</div>
                      <div class="bottom">알려드립니다!</div>
                      <img src="./images/picture/egg1.jpg">
                   </div>
                   <div>
-                     <h3>5위:메추리알과 햄 조합의 장조림</h3>
+                     <h3>3위:햄 메추리알조림</h3>
                   </div>
             </a></li>
          </ul>
       </div>
-   </middle>
+   </header>
 </div>
 
 <%--핫뉴스 시작 --%>
