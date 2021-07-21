@@ -29,16 +29,78 @@ body{
     overflow: hidden;
     border-bottom: 2px solid black;
 }
-#PostingVideo{
-	margin: 10px 0 10px 0;
+#postingInfo{
+	position: relative;
+	top: 5px;
+    font-size: 1.1em;
+}
+#postingWriter{
+	float: left;
+}
+#postingDate{
+	float: right;
+    margin-right: 20px;	
+}
+#postingVisiter{
+	float: right;
 }
 
+#PostingVideo{
+	position: relative;
+	top: 10px;
+	margin: 0px 0 20px 0;
+}
+
+#postingRecipe{
+	width: 880px;
+    margin-bottom: 100px;
+}
+
+.recipeDescriptionBox{
+    width: 880px;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    margin: 20px 0px 0px 0px;
+    border-bottom: 1px solid black;
+}
+.recipeDescriptionBox img{
+	float: left;
+	width: 420px;
+}
+.recipeDescription{
+	float: right;
+	width: 420px;
+	margin-right: 10px;
+    font-size: 1.1em;
+}
+
+#postingEditRmBtn{
+    float: right;
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+#postingEditRmbtn input{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #FFE4B5;
+}
+#postingEditRmbtn input:hover{
+    background-color: #FFA07A;
+}
+#postingEditRmbtn input:active{
+    background-color: #FFA07A;
+	filter: drop-shadow(0 0 3px #FF6347);
+}
 /*게시글 검색 영역*/
 #RecipieSearchPage{
 	float: left;
 	width: 1200px;
 	height: 600px;
-	margin: 50px 0 80px 350px;
+	margin: 50px 0px 300px 350px;
 	position: relative;
 	top: 150px;
 }

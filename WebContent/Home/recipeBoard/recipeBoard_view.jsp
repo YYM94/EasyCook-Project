@@ -36,18 +36,38 @@ if(request.getParameter("page") == null){
 	currentPage = Integer.parseInt(request.getParameter("page"));
 }
 
-//현재 조회중인 게시글 번호
+////////////현재 조회중인 게시글 정보//////////////
+//게시글 번호
 int currentPosting;
 if(request.getParameter("post") == null){
 	currentPosting = 0;
 }else{
 	currentPosting = Integer.parseInt(request.getParameter("post"));
 }
-
-
-//게시글 영상 링크를 가공해서 가져옴
+//게시글 제목
+String Title = "번째 게시글 제목";
+//게시글 작성자
+String Writer = "작성자";
+//게시글 조회수
+int Visiter = 10;
+//게시글 작성날짜
+String Date = "2021-07-21";
+//게시글 영상 링크
 String videoID = "kR77WlHRZrs";
 String youtubeLink = "https://www.youtube.com/embed/" + videoID;
+//게시글 레시피 설명 폼 갯수
+int Recipes = 4;
+//게시글 레시피 설명 텍스트 : -,-로 구분 
+String recipeDes = "불맛 달걀볶음밥 <br>[재료]<br>밥 1공기(200g)<br>대파 1/2컵(40g)<br>달걀 2개(120g)<br>식용유 4큰술(40g)"
++"<br>진간장 1/2큰술(5g)<br>MSG 1/4큰술(2g)<br>맛소금 1g" + "-,-"
++"[만드는 법]<br>1. 대파는 송송 썰어 준비한다.<br>2. 프라이팬에 식용유, 대파를 넣어 파 기름을 내고 노릇해지면 한쪽으로 몰아둔다."
++"<br>3. 다른 한쪽에 달걀을 넣어 스크램블 한다." + "-,-"
++"4. 재료가 없는 쪽에 간장을 넣어 눌어붙도록 끓여주고 스크램블 한 달걀, 볶은 대파와 섞어준다." + "-,-"
++"<br>5. 달걀, 대파가 골고루 섞이면 맛소금, 밥을 넣고 불을 끈 후 국자를 이용하여 섞어준다."
++"<br>6. 밥이 골고루 섞이면 센 불에 올려 볶는다. "
++"<br>7. 기호에 따라 MSG를 넣어 볶은 후 완성한다.";
+String[] recipeSplit = recipeDes.split("-,-");
+
 %>
 
 <%@ include file="../menubar/top_left_menubar.jsp"%>
@@ -56,7 +76,13 @@ String youtubeLink = "https://www.youtube.com/embed/" + videoID;
 <%if(currentPosting != 0){ %>
 	<div id="PostingViewPage">
 		<div id="PostingTitle">
-			<%=currentPosting %>번째 게시글 제목
+			<%=currentPosting + " " + Title%>
+		</div>
+		
+		<div id="postingInfo">
+			<div id="postingWriter"><%= Writer %></div>
+			<div id="postingVisiter">조회수 : <%= Visiter %></div>
+			<div id="postingDate"><%= Date %></div>
 		</div>
 		
 		<div id="PostingVideo">
@@ -65,6 +91,22 @@ String youtubeLink = "https://www.youtube.com/embed/" + videoID;
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 				allowfullscreen>
 			</iframe>
+		</div>
+		
+		<div id="postingRecipe">
+			<%for(int i = 0; i < Recipes; i++){ %>
+				<div class="recipeDescriptionBox">
+					<img src="../images/RecipeIMG/210721_0/<%=i+1 %>.jpg"/>
+					<div class="recipeDescription">
+						<%=recipeSplit[i] %>
+					</div>
+				</div>
+			<%} %>
+		</div>
+		
+		<div id="postingEditRmBtn">
+			<input type="button" value="수정"/>
+			<input type="button" value="삭제"/>
 		</div>
 	</div>
 <%} %>
