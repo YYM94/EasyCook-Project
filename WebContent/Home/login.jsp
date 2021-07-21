@@ -40,8 +40,9 @@
 
 /* 비밀번호 재설정 영역에서 비밀번호 재설정 버튼 클릭시 알림창 띄우기 */
 	function RePWD(){ /*아이디와 질문 답 맞는지 확인후 맞다면 알림창 띄우고 로그인페이지로 이동하는 함수 추가해야함 */
-		alert('비밀번호 재설정이 완료되었습니다. \n로그인 페이지로 이동합니다.');
-		location.href='login.jsp';
+		alert('비밀번호 재설정이 완료되었습니다.');
+		$('#login_find_pwd').fadeToggle();
+		$('#login_id_box').focus();
 }
 
 
@@ -117,10 +118,6 @@
 				<div id="login_find_button">
 					<div id="login_find_button_id">
 						<button onclick="FindViewID()" id="login_find_button_id_title">아이디 찾기</button>
-					</div>
-					
-					<div id="login_find_button_back">
-						<button onclick="location='login.jsp'" id="login_find_button_login_title">로그인</button>
 					</div>
 				</div>
 				

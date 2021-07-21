@@ -212,11 +212,6 @@ strong{
 	margin-bottom: 0%;
 }
 
-#login_find_button_id{
-	float: left;
-	margin-left: 23%;
-}
-
 #login_find_button_id_title:hover, #login_find_button_login_title:hover{
 	cursor: pointer;
 	color: white;
