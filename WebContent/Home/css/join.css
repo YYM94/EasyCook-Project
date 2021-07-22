@@ -2,6 +2,16 @@
 
 #join_body{
 	margin: 0px;
+	-webkit-animation: fadein 1000ms ease-out;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 #panel{
@@ -49,22 +59,28 @@
 } /* 판 내용물 */
 
 .join_title{
-	margin-bottom: 2%;
 } /* 각 항목 글자와 입력박스 클래스 (한줄씩) */
 
 strong{
-	margin-top: 1.5%;
+	margin-top: 0.7%;
 	margin-left: 5%;
 	float: left;
 	width: 25%;
 } /* 각 항목 왼쪽 글자영역 */
 
 .form-control{
-	height: 2.5em;
+	height: 2em;
 	border: 1px solid #d9d9de;
 	border-radius: 5px;
 } /* 각 항목 입력 박스 */
 
+.error{
+	font-size: 0.8em;
+	margin-left: 30%;
+	color: red;
+	font-weight: bold;
+	visibility: hidden;
+}
 
 #join_id_box{
 	width: 25%;
@@ -85,6 +101,10 @@ strong{
 #join_post_box_2, #join_post_box_3{
 	margin-left: 30%;
 } /* 도로명,나머지상세주소 입력 박스*/
+
+#join_post_box_1, #join_post_box_2{
+	margin-bottom: 3.5%;
+} /*우편번호, 도로명 주소 입력칸 사이 마진*/
 
 #join_pw_box{
 	ime-mode: inactive; 
