@@ -43,7 +43,7 @@ input[id*="answer"] + label em{
 	height:30px;
 	margin-top:-15px;
 	display:inline-block;
-	background:url('../picture/arrow.png') 0 0 no-repeat;
+	background:url('../images/picture/arrow.png') 0 0 no-repeat;
 }
 /* 공지사항 내용 */
 input[id*="answer"] + label + div{
