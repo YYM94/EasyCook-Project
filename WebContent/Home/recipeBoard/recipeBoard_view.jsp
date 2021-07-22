@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <meta charset="UTF-8">
 <title>레시피 게시판</title>
 <link rel="stylesheet" type="text/css" href="../css/recipeBoard.css"/>
@@ -14,11 +15,11 @@ $(window).resize(function(){
 			SearchPageMargin = 0;
 		}
 		$("#RecipieSearchPage").css("margin-left", SearchPageMargin);
-		$("#PostingViewPage").css("margin-left", SearchPageMargin+150);
+		$("#PostingViewPage").css("margin-left", SearchPageMargin);
 	}
 	if($(window).width() >= 1550){
 		$("#RecipieSearchPage").css("margin-left", 350);
-		$("#PostingViewPage").css("margin-left", 500);
+		$("#PostingViewPage").css("margin-left", 350);
 	}
 });
 
@@ -63,12 +64,21 @@ String recipeDes = "불맛 달걀볶음밥 <br>[재료]<br>밥 1공기(200g)<br>
 +"[만드는 법]<br>1. 대파는 송송 썰어 준비한다.<br>2. 프라이팬에 식용유, 대파를 넣어 파 기름을 내고 노릇해지면 한쪽으로 몰아둔다."
 +"<br>3. 다른 한쪽에 달걀을 넣어 스크램블 한다." + "-,-"
 +"4. 재료가 없는 쪽에 간장을 넣어 눌어붙도록 끓여주고 스크램블 한 달걀, 볶은 대파와 섞어준다." + "-,-"
-+"<br>5. 달걀, 대파가 골고루 섞이면 맛소금, 밥을 넣고 불을 끈 후 국자를 이용하여 섞어준다."
++"5. 달걀, 대파가 골고루 섞이면 맛소금, 밥을 넣고 불을 끈 후 국자를 이용하여 섞어준다."
 +"<br>6. 밥이 골고루 섞이면 센 불에 올려 볶는다. "
 +"<br>7. 기호에 따라 MSG를 넣어 볶은 후 완성한다.";
 String[] recipeSplit = recipeDes.split("-,-");
 
 %>
+<!-- 댓글 관련 -->
+<c:set var="totalComments" value="80"/><!-- 현재 게시글의 댓글 갯수 -->
+<c:set var="cWriter" value="댓글"/><!-- 댓글 작성자 -->
+<c:set var="cContent" value="댓글 내용입니다."/><!-- 댓글 내용 -->
+<c:set var="cDate" value="2021-07-22"/><!-- 댓글 작성날짜 -->
+
+<c:set var="cPage" value="1"/><!-- 현재 댓글 페이지 -->
+
+
 
 <%@ include file="../menubar/top_left_menubar.jsp"%>
 
@@ -104,10 +114,39 @@ String[] recipeSplit = recipeDes.split("-,-");
 			<%} %>
 		</div>
 		
-		<div id="postingEditRmBtn">
-			<input type="button" value="수정"/>
-			<input type="button" value="삭제"/>
+		<%if(Writer.equals("작성자")){ %>
+			<div id="postingEditRmBtn">
+				<input type="button" value="수정"/>
+				<input type="button" value="삭제"/>
+			</div>
+		<%} %>
+		
+		<div id="commentWrap">
+			<c:if test="${ totalComments > 0 }">
+			
+				<!-- 한 페이지에 10개의 댓글을 출력 -->
+				<c:set var="startComment" value="${ cPage }"/>
+				<c:set var="endComment" value="${ cPage+9 }"/>
+				
+				<c:forEach var="i" begin="${ startComment }" end="${ endComment }">
+					<div class="commentBox">
+						<div class="commentWriter">${ cWriter }</div>
+						<div class="commentContent">${ cContent }</div>
+						<div class="commentDate">
+							${ cDate }
+							<c:if test="${ cWriter == '댓글'  }">
+								<input type="button" value="삭제"/>
+							</c:if>
+						</div>
+					</div>
+				</c:forEach>
+				
+			</c:if>
+			<c:if test="${ totalComments == 0 }">
+				
+			</c:if>
 		</div>
+		
 	</div>
 <%} %>
 
@@ -130,11 +169,7 @@ String[] recipeSplit = recipeDes.split("-,-");
 				<span class="BoardPostings">
 					<span class="BoardPostThumbnail"></span>
 					<span class="BoardPostTitle"><%=totalPages-i+1 %>번째 게시글의 제목 : 요리(料理, Cooking)는 먹기 좋게 가공한 음식이나 가공 행위 자체를 의미한다.</span>
-					<span class="BoardPostCont"><%=totalPages-i+1 %>번째 게시글의 내용 :식재료를 가공하는 행위에는 '조리(調理)'도 명사로 쓰이지만, 
-					음식을 보고 조리라고 부르지는 않는다. 한자로 풀이하면, 요리(料理)는 料(헤아릴 요)와 理(다스릴 리)고 조리(調理)는 調(고를 조)와 理(다스릴 리)로서 
-					조리는 재료를 알맞게 해 다스려 음식을 만든다는, 즉 음식을 먹기 좋게 만든다는 뜻이고 요리는 '다스리다, 처리하다'라는 뜻이었으나 이것이 전의돼 
-					‘음식을 만든다’거나 ‘완성된 음식’ 자체를 의미하게 됐다. 참고로 동사형으로 쓰인다고 해도 뭔가 약간의 차이가 나는게, 요리는 예술(Art)분야고, 
-					조리는 기능(Craft)분야에 해당한다. 누구나 예술은 할 수 있지만, 기능을 보유하는 것과는 차이가 있다.</span>
+					<span class="BoardPostCont"><%=totalPages-i+1 %>번째 게시글의 내용 :<%= recipeSplit[0] %></span>
 				</span>
 			</a>
 		<%
