@@ -7,43 +7,94 @@
 <link rel="stylesheet" type="text/css" href="../css/hotNewsBoard.css" />
 <script src="./js/jquery.js"></script>
 <script type="text/javascript">
-
+	
 </script>
 </head>
 <body>
 	<%@ include file="../menubar/top_left_menubar.jsp"%>
 
-<div class="example">
-  <ul class="ul_article">
-  <%for(int i=0; i<10; i++){ %>
-    <div class="hotNews_hyper" onclick="window.open('http://www.google.co.kr');">
-    <li>
-      <div class="img_wrap">	
-      <img class="hotNews_img" src="../images/from.jpg" />
-      </div>
-      <p>기사제목 : 페이지창 어떻게만듦?대박이네 나도빨리만들고싶어 하지만너무 어렵겠지?</p>
-    </li>
-    </div>
-    <% } %>
-  </ul>
-</div>
+	<div class="example">
+		<ul class="ul_article">
+			<%
+				for (int i = 0; i < 12; i++) {
+			%>
+			<div class="hotNews_hyper" onclick="window.open('http://www.google.co.kr');">
+				<li>
+					<div class="img_wrap">
+						<img class="hotNews_img" src="../images/from.jpg" />
+					</div>
+					<p>기사제목 : 페이지창 어떻게만듦?대박이네 나도빨리만들고싶어 하지만너무 어렵겠지?</p>
+				</li>
+			</div>
+			<%
+				}
+			%>
+		</ul>
+	</div>
 
-<div class="bottom_page">
-	<div class="page_search">
-		<input name="" type="text" class="input_box"> 
-		<input type="button" value="Search" class="btn">
+	<div class="bottom_page">
+		<div class="page_search">
+			<input name="" type="text" class="input_box"> 
+			<input type="button" value="Search" class="btn">
+		</div>
+
+		<div class="page_number">
+			<%
+			int currentPage;
+			if(request.getParameter("page") == null){
+				currentPage = 1;
+			}else{
+				currentPage = Integer.parseInt(request.getParameter("page"));
+			}
+			
+			int totalCount=200; //총게시물
+			int countList = 8; //보여질 게시물
+			int countPage = 7; //보여질 페이징갯수
+
+			int totalPage = totalCount / countList; //페이징객수
+
+			if (totalCount % countList != 0) {
+				totalPage++;
+			}
+
+			if (totalPage < currentPage) {//현재페이지가 끝페이지를 넘어가는것을 방지
+				currentPage = totalPage;
+			}
+
+			int startPage = ((currentPage - 1) / totalCount) * totalCount + 1; ///시작페이징 번호
+			int endPage = startPage + countPage - 1; //끝페이징 번호		
+			if (endPage > totalPage) { //페이징이 10개씩인대 끝게시물에서도 의미없는 페이징번호가 나열되는것을 방지
+				endPage = totalPage;
+			}
+
+			if (startPage > 1) {
+			%>
+				<a href="hotNewsBoard_view.jsp?page=<%=1%>">[FIRST]</a>
+			<%}
+			if (currentPage > 1) {
+			%>			
+				<a href="hotNewsBoard_view.jsp?page=<%=currentPage-1%>">[PREV]</a>
+			<%}
+			for (int iCount = startPage; iCount <= endPage; iCount++) {//페이징 7개씩 나열
+			%> 
+				<a href="hotNewsBoard_view.jsp?page=<%=iCount%>" >
+				<%if (iCount == currentPage) { %>		
+					<b class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</b>
+			<%} else {%>
+					<span class="PageNumber">&nbsp;<%= iCount %>&nbsp;</span>
+			<%}%>
+				</a>
+			<%}
+
+			if (currentPage < totalPage) {%>
+				<a href="hotNewsBoard_view.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+			<%}
+			if (endPage < totalPage) {%>
+				<a href="hotNewsBoard_view.jsp?page=<%=totalPage%>">[LAST]</a>
+			<%} %>
+			
+		</div>
 	</div>
- 
-	<div class="page_number">
-		<a href="#">&nbsp;&nbsp;Prev&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;1&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;2&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;3&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;4&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;5&nbsp;&nbsp;</a> 
-		<a href="#">&nbsp;&nbsp;Next&nbsp;&nbsp;</a>
-	</div>
-</div>
 
 </body>
 </html>
