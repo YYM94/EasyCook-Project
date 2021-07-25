@@ -172,6 +172,12 @@ strong{
 	padding: 3%;
 }
 
+.login_find_id_control{
+	height: 2.5em;
+	border: 1px solid #d9d9de;
+	border-radius: 5px;	
+}
+
 #login_find_id_q{
 	margin-bottom: 5%;
 }
@@ -181,11 +187,12 @@ strong{
 }
 
 #find_q {
-	margin-top: 1%;
+	margin-top: 1.5%;
 	margin-left: 7%;
 	float: left;
-	width: 35%;
+	width: 30%;
 	font-size: 100%;
+	margin-right: 5%;
 }
 
 #find_tel{
@@ -197,11 +204,6 @@ strong{
 }
 
 #login_find_id_q_a {
-	margin-right: 7%;
-	width: 43%;
-}
-
-#login_find_id_tel_box{
 	margin-right: 7%;
 	width: 43%;
 }
@@ -275,6 +277,12 @@ strong{
 	padding: 3%;
 }
 
+.login_find_pwd_control{
+	height: 2.5em;
+	border: 1px solid #d9d9de;
+	border-radius: 5px;	
+}
+
 #login_find_pwd_id{
 	margin-bottom: 5%;
 }
@@ -287,7 +295,52 @@ strong{
 	font-size: 100%;
 }
 
-#find_tel_pwd {
+#login_find_pwd_id_text {
+	margin-right: 7%;
+	width: 43%;
+}
+
+#login_find_pwd_q{
+	margin-bottom: 5%;
+}
+
+#find_pw_q {
+	margin-top: 1.5%;
+	margin-left: 7%;
+	float: left;
+	width: 30%;
+	font-size: 100%;
+	margin-right: 5%;
+}
+
+#login_find_pwd_q_a{
+	margin-right: 7%;
+	width: 43%;
+}
+
+#login_find_pwd_newpwd{
+	margin-bottom: 5%;
+}
+
+#find_pwd_newpwd{
+	margin-top: 1.5%;
+	margin-left: 7%;
+	float: left;
+	width: 30%;
+	font-size: 100%;
+	margin-right: 5%;	
+}
+
+#login_find_pwd_newpwd_box{
+	margin-right: 7%;
+	width: 43%;	
+}
+
+#login_find_pwd_newpwd_check{
+	margin-bottom: 5%;	
+}
+
+#find_pwd_newpwd_check{
 	margin-top: 2%;
 	margin-left: 7%;
 	float: left;
@@ -295,25 +348,15 @@ strong{
 	font-size: 100%;	
 }
 
-#login_find_pwd_id_text {
-	margin-right: 7%;
-	width: 43%;
-}
-
-#login_find_pwd_tel{
-	margin-bottom: 5%;
-}
-
 #login_find_pwd_tel_box{
 	margin-right: 7%;
-	width: 43%;
+	width: 43%;	
 }
 
 #login_find_button_pwd{
 	text-align: center;
 	border: 1px solid blue;
 }
-
 
 #login_find_button_pwd_title:hover{
 	cursor: pointer;

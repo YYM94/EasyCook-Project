@@ -68,6 +68,10 @@ strong{
 	width: 25%;
 } /* 각 항목 왼쪽 글자영역 */
 
+strong:hover{
+	cursor: default;
+}
+
 .form-control{
 	height: 2em;
 	border: 1px solid #d9d9de;

@@ -173,7 +173,7 @@
 						</div>
 						
 						<div id="join_post_1" class="join_title">
-							<strong><label for="join_post_box_1">주소</label></strong>
+							<strong>주소</strong>
 							<input type="text" name="join_post_box_1" id="join_post_box_1" class="form-control" 
 							placeholder="우편번호" disabled />&nbsp;&nbsp;
 							<input type="button" id="join_post_btn" value="우편번호찾기" onclick="execDaumPostcode()" /><br/>
