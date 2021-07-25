@@ -3,10 +3,18 @@ a{
 	text-decoration: none;
 }
 body{
-	background-color:beige;
+	background-image:url('../images/picture/food_image.jpg');
+	background-repeat: no-repeat;
+	background-size:100% 100%;
 }
 .search-form2{
 	text-align:center;
+	padding:10px;
+}
+.search-form2 .hidden2{
+	  color: #ffa315;
+	  text-shadow:2px 2px #000000;
+	  font-size:200%;
 }
 .FAQ{
 	width:50%;
@@ -20,15 +28,14 @@ input[id*="FAQ"]{
 input[id*="FAQ"] + label{
 	display:block;
 	padding:20px;
-	border:1px solid #000000;
-	border-bottom:0;
+	border-top:1px solid #000000;
+	border-bottom:1px solid #000000;
 	color:#000000;
 	font-weight:900;
 	background:#ffffff;
 	cursor:pointer;
 	position:relative;
 }
-
 /* 화살표 이미지 */
 input[id*="FAQ"] + label em{
 	position:absolute;
@@ -42,7 +49,6 @@ input[id*="FAQ"] + label em{
 }
 /* FAQ 내용 */
 input[id*="FAQ"] + label + div{
-	border:1px solid black;
 	max-height:0;
 	transition: all .35s;
 	overflow:hidden;
@@ -68,7 +74,7 @@ input[id*="FAQ"]:checked + label em {
 	position: relative;
 	width: 520px;
 	height: 25px;
-	margin: 10px 0 0 47%;
+	margin: 10px 0 0 46.5%;
 	align-content: center;
 	z-index: 300;
 }

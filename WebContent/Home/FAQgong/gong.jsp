@@ -21,7 +21,7 @@ if (request.getParameter("page") == null) {
 
 <div id="GongPage">
 	<div class="search-form">
-		<h3 class="hidden">공지사항</h3>
+		<h3 class="hidden2">공지사항</h3>
 		<form class="table-form">
 			<fieldset>
 				<legend class="hidden">검색</legend>
