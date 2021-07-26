@@ -116,3 +116,13 @@
 	border:1px solid black; color:black; border-radius:10px;
 	background-position: center center; cursor: pointer;
 }
+
+#page_number_control{
+	text-align: center;
+}
+.PageNumber{
+	color: black;
+}
+.CurrentPageNumber{
+	color: white;
+}
