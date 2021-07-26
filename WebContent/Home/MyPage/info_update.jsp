@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>EasyCook! 회원 정보 변경</title>
 
-<link rel="stylesheet" type="text/css" href="./css/info_update.css"/>
+<link rel="stylesheet" type="text/css" href="../css/info_update.css"/>
 
 <script src="./js/jquery.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
