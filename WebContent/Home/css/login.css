@@ -147,7 +147,7 @@ strong{
 	padding-top: 1.5%;
 	font-size: 300%;
 	text-align: center;
-	border: 1px solid lightgreen;	
+/* 	border: 1px solid lightgreen;	 */
 }
 
 #login_find_id_header a{
@@ -168,7 +168,7 @@ strong{
 }
 
 #login_find_id_table{
-	border: 2px solid yellow;
+/* 	border: 2px solid yellow; */
 	padding: 3%;
 }
 
@@ -210,7 +210,7 @@ strong{
 
 #login_find_button{
 	text-align: center;
-	border: 1px solid blue;
+/* 	border: 1px solid blue; */
 	margin-bottom: 0%;
 }
 
@@ -251,7 +251,7 @@ strong{
  #login_find_pwd_header{
 	font-size: 300%;
 	text-align: center;
-	border: 1px solid red;	
+/* 	border: 1px solid red; */	
 	padding-top: 1.5%;
 }
 
@@ -273,7 +273,7 @@ strong{
 }
 
 #login_find_pwd_table{
-	border: 2px solid orange;
+/* 	border: 2px solid orange; */
 	padding: 3%;
 }
 
@@ -355,7 +355,7 @@ strong{
 
 #login_find_button_pwd{
 	text-align: center;
-	border: 1px solid blue;
+/* 	border: 1px solid blue; */
 }
 
 #login_find_button_pwd_title:hover{
