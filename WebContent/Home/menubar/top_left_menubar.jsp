@@ -109,7 +109,7 @@
 			<a href="/EasyCook_Project/Home/login.jsp">Login</a>&nbsp;&nbsp;
 			<a href="/EasyCook_Project/Home/join.jsp">Join</a>
 			<br>
-			<a href="#">마이페이지</a>
+			<a href="/EasyCook_Project/Home/MyPage/mypage.jsp">마이페이지</a>
 			<br>
 			<a href="#">관리자 페이지</a>
 		</div>

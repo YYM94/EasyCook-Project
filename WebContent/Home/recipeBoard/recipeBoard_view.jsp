@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <meta charset="UTF-8">
 <title>레시피 게시판</title>
 <link rel="stylesheet" type="text/css" href="../css/recipeBoard.css"/>
@@ -27,7 +28,7 @@ $(window).resize(function(){
 
 <%
 //하단 페이지 번호 생성을 위한 전체 게시글 수 검색
-int totalPages = 200;
+int totalPostings = 196;
 
 //현재 페이지
 int currentPage;
@@ -71,12 +72,12 @@ String[] recipeSplit = recipeDes.split("-,-");
 
 %>
 <!-- 댓글 관련 -->
-<c:set var="totalComments" value="80"/><!-- 현재 게시글의 댓글 갯수 -->
+<c:set var="totalComments" value="114"/><!-- 현재 게시글의 댓글 갯수 -->
 <c:set var="cWriter" value="댓글"/><!-- 댓글 작성자 -->
 <c:set var="cContent" value="댓글 내용입니다."/><!-- 댓글 내용 -->
 <c:set var="cDate" value="2021-07-22"/><!-- 댓글 작성날짜 -->
 
-<c:set var="cPage" value="1"/><!-- 현재 댓글 페이지 -->
+<c:set var="cPage" value="${ param.cpage }"/><!-- 현재 댓글 페이지 -->
 
 
 
@@ -121,17 +122,20 @@ String[] recipeSplit = recipeDes.split("-,-");
 			</div>
 		<%} %>
 		
-		<div id="commentWrap">
-			<c:if test="${ totalComments > 0 }">
+		<c:if test="${ totalComments > 0 }">
+			<div id="commentWrap">
 			
 				<!-- 한 페이지에 10개의 댓글을 출력 -->
-				<c:set var="startComment" value="${ cPage }"/>
-				<c:set var="endComment" value="${ cPage+9 }"/>
+				<c:set var="startComment" value="${ 1 + ((cPage-1)*10) }"/>
+				<c:set var="endComment" value="${ cPage * 10 }"/>
+				<c:if test="${ endComment > totalComments }">
+					<c:set var="endComment" value="${ totalComments }"/>
+				</c:if>
 				
 				<c:forEach var="i" begin="${ startComment }" end="${ endComment }">
 					<div class="commentBox">
 						<div class="commentWriter">${ cWriter }</div>
-						<div class="commentContent">${ cContent }</div>
+						<div class="commentContent">${ i } ${ cContent }</div>
 						<div class="commentDate">
 							${ cDate }
 							<c:if test="${ cWriter == '댓글'  }">
@@ -140,12 +144,96 @@ String[] recipeSplit = recipeDes.split("-,-");
 						</div>
 					</div>
 				</c:forEach>
+			</div>
+			
+			<%-- 댓글 페이징 --%>
+			<div id="commentPage">
+				<%-- 페이징 변수 지정 --%>
 				
-			</c:if>
+				<%-- 전체 페이지 수 --%>
+				<%-- 페이지 소숫점 버림 --%>
+				<fmt:parseNumber var="cPages" integerOnly="true" value="${ totalComments / 10 }"/>
+				<c:if test="${ cPages % 10 > 0 }">
+					<c:set var="cPages" value="${ cPages + 1 }"/>
+				</c:if>
+				
+				<%-- 페이지 시작 번호 --%>
+				<c:set var="startcPage" value="${ cPage - 2 }"/>
+				
+				<%-- 페이지 끝 번호 --%>
+				<c:set var="lastcPage" value="${ cPage + 2 }"/>
+				
+				<%-- 페이지 시작, 끝 부분 처리 --%>
+				<c:if test="${ cPage < 3 }">
+					<c:set var="startcPage" value="1"/>
+					<c:set var="lastcPage" value="5"/>
+					<%-- 댓글 총 페이지 수가 5 미만일 경우 처리 --%>
+					<c:if test="${ cPages < 5 }">
+						<c:set var="lastcPage" value="${ cPages }"/>
+					</c:if>
+				</c:if>
+				<c:if test="${ lastcPage > cPages }">
+					<c:set var="startcPage" value="${ cPages - 4 }"/>
+					<c:set var="lastcPage" value="${ cPages }"/>
+				</c:if>
+				
+				<%-- 페이지 버튼 출력 --%>
+				<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=currentPosting %>&cpage=1#commentWrap">
+					<span class="cPageNumber">
+						<img src="../images/PageMoveLeftEnd.png"/>
+					</span>
+				</a>
+				<c:if test="${ cPage == 1 }">
+					<span class="cPageNumber">
+						<img src="../images/PageEnd.png"/>
+					</span>
+				</c:if>
+				<c:if test="${ cPage != 1 }">
+					<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=currentPosting %>&cpage=${ cPage-1 }#commentWrap">
+						<span class="cPageNumber">
+							<img src="../images/PageMoveLeft.png"/>
+						</span>
+					</a>
+				</c:if>
+				
+				<c:forEach var="i" begin="${ startcPage }" end="${ lastcPage }">
+					<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=currentPosting %>&cpage=${ i }#commentWrap">
+						<c:if test="${ i == cPage }">
+							<div class="cPageNumber" style="color: #FF6347; font-weight: bold">
+								${ i }
+							</div>
+						</c:if>
+						<c:if test="${ i != cPage }">
+							<div class="cPageNumber" style="color: #252525;">
+								${ i }
+							</div>
+						</c:if>
+					</a>
+				</c:forEach>
+				
+				<c:if test="${ cPage == cPages }">
+					<span class="cPageNumber">
+						<img src="../images/PageEnd.png"/>
+					</span>
+				</c:if>
+				<c:if test="${ cPage != cPages }">
+					<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=currentPosting %>&cpage=${ cPage+1 }#commentWrap">
+						<span class="cPageNumber">
+							<img src="../images/PageMoveRight.png"/>
+						</span>
+					</a>
+				</c:if>
+				<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=currentPosting %>&cpage=${ cPages }#commentWrap">
+					<span class="cPageNumber">
+						<img src="../images/PageMoveRightEnd.png"/>
+					</span>
+				</a>
+			</div>
+			
+		</c:if>
 			<c:if test="${ totalComments == 0 }">
 				
 			</c:if>
-		</div>
 		
 	</div>
 <%} %>
@@ -160,16 +248,16 @@ String[] recipeSplit = recipeDes.split("-,-");
 		<%
 		int startPosting = currentPage*8 - 7;
 		int lastPosting = currentPage * 8;
-		if(currentPage*8 > totalPages){
-			lastPosting = totalPages;
+		if(currentPage*8 > totalPostings){
+			lastPosting = totalPostings;
 		}
 		for(int i=startPosting; i<=lastPosting; i++){ 
 		%>
-			<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=totalPages-i+1%>">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage%>&post=<%=totalPostings-i+1%>&cpage=1">
 				<span class="BoardPostings">
 					<span class="BoardPostThumbnail"></span>
-					<span class="BoardPostTitle"><%=totalPages-i+1 %>번째 게시글의 제목 : 요리(料理, Cooking)는 먹기 좋게 가공한 음식이나 가공 행위 자체를 의미한다.</span>
-					<span class="BoardPostCont"><%=totalPages-i+1 %>번째 게시글의 내용 :<%= recipeSplit[0] %></span>
+					<span class="BoardPostTitle"><%=totalPostings-i+1 %>번째 게시글의 제목 : 요리(料理, Cooking)는 먹기 좋게 가공한 음식이나 가공 행위 자체를 의미한다.</span>
+					<span class="BoardPostCont"><%=totalPostings-i+1 %>번째 게시글의 내용 :<%= recipeSplit[0] %></span>
 				</span>
 			</a>
 		<%
@@ -181,8 +269,8 @@ String[] recipeSplit = recipeDes.split("-,-");
 	<div id="bottomPageNumber">
 		<%-- 전체 게시글 수를 이용한 하단 페이지 번호 생성 --%>
 		<%
-		int pages = totalPages/8;
-		if((totalPages % 8) > 0){
+		int pages = totalPostings/8;
+		if((totalPostings % 8) > 0){
 			pages++;
 		}
 		//페이지 첫번째, 마지막 번호 지정
@@ -191,13 +279,16 @@ String[] recipeSplit = recipeDes.split("-,-");
 		if((currentPage-5) <= 0){
 			firstPage = 1;
 			lastPage = 10;
+			if( pages < 10 ){
+				lastPage = pages;
+			}
 		}
 		if((currentPage+5) > pages){
 			firstPage = pages-9;
 			lastPage = pages;
 		}
 		%>
-		<a href="recipeBoard_view.jsp?page=<%=1%>&post=0">
+		<a href="recipeBoard_view.jsp?page=<%=1%>&post=0&cpage=1">
 			<span class="PageNumber">
 				<img src="../images/PageMoveLeftEnd.png"/>
 			</span>
@@ -207,7 +298,7 @@ String[] recipeSplit = recipeDes.split("-,-");
 				<img src="../images/PageEnd.png"/>
 			</span>
 		<%}else{ %>
-			<a href="recipeBoard_view.jsp?page=<%=currentPage-1%>&post=0">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage-1%>&post=0&cpage=1">
 				<span class="PageNumber">
 					<img src="../images/PageMoveLeft.png"/>
 				</span>
@@ -216,7 +307,7 @@ String[] recipeSplit = recipeDes.split("-,-");
 		<%
 		for(int i=firstPage; i<=lastPage; i++){
 		%>
-			<a href="recipeBoard_view.jsp?page=<%=i%>&post=0">
+			<a href="recipeBoard_view.jsp?page=<%=i%>&post=0&cpage=1">
 				<%if(i == currentPage){ %>
 					<span class="PageNumber" style="color: #FF6347; font-weight: bold">
 						<%=i %>
@@ -235,13 +326,13 @@ String[] recipeSplit = recipeDes.split("-,-");
 				<img src="../images/PageEnd.png"/>
 			</span>
 		<%}else{ %>
-			<a href="recipeBoard_view.jsp?page=<%=currentPage+1%>&post=0">
+			<a href="recipeBoard_view.jsp?page=<%=currentPage+1%>&post=0&cpage=1">
 				<span class="PageNumber">
 					<img src="../images/PageMoveRight.png"/>
 				</span>
 			</a>
 		<%} %>
-		<a href="recipeBoard_view.jsp?page=<%=pages%>&post=0">
+		<a href="recipeBoard_view.jsp?page=<%=pages%>&post=0&cpage=1">
 			<span class="PageNumber">
 				<img src="../images/PageMoveRightEnd.png"/>
 			</span>
