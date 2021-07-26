@@ -32,7 +32,7 @@
 	font-size: 300%;
 	text-align: center;
 	margin-top: 3%;
-	border: 1px solid lightgreen;
+/* 	border: 1px solid lightgreen; */
 }
 
 #panel_header_login a{
@@ -55,7 +55,7 @@
 
 #panel_table_login{
 	padding: 3%;
-	border: 1px solid orange;
+/* 	border: 1px solid orange; */
 }
 
 .login_title{
@@ -86,7 +86,7 @@ strong{
 
 #login_footer{
 	text-align: center;
-	border: 1px solid blue;
+/* 	border: 1px solid blue; */
 }
 
 #login_button, #join_button_login{
@@ -116,7 +116,7 @@ strong{
 
 #login_find{
 	text-align: center;
-	border: 1px solid red;
+/* 	border: 1px solid red; */
 	padding-bottom: 2%;
 }
 

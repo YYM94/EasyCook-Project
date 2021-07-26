@@ -25,6 +25,7 @@
 	width: 70%;
 	margin-left: 15%;
 	margin-top: 10%;
+/* 	box-shadow: 5px 5px 5px 5px black; */
 } /* 폼 전체 판 */
 
 #panel-header{
@@ -32,7 +33,8 @@
 	font-size: 300%;
 	text-align: center;
 	margin-top: 3%;
-	border: 1px solid lightgreen;
+	margin-bottom: 3%;
+/* 	border: 1px solid lightgreen; */
 } /* 판 헤더 부분 (EasyCook! 회원가입) */
 
 #join_header_title_1{
@@ -55,7 +57,7 @@
 
 #panel-table{
 	padding: 3%; 
-	border: 1px solid orange;
+/* 	border: 1px solid orange; */
 } /* 판 내용물 */
 
 .join_title{

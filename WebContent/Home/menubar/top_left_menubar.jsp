@@ -111,7 +111,7 @@
 			<br>
 			<a href="/EasyCook_Project/Home/MyPage/mypage.jsp">마이페이지</a>
 			<br>
-			<a href="#">관리자 페이지</a>
+			<a href="/EasyCook_Project/Home/admin.jsp">관리자 페이지</a>
 		</div>
 		<div id="top_search">
 			<img id="top_search_icon" src="/EasyCook_Project/Home/images/top_search.png" width="30" height="30"/>
