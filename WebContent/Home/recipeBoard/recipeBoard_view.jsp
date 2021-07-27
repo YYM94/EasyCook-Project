@@ -10,18 +10,8 @@
 
 <%--페이지가 작아지면 게시판을 왼쪽에 붙임--%>
 $(window).resize(function(){
-	if($(window).width() < 1550){
-		var SearchPageMargin = $(window).width()-1200;
-		if(SearchPageMargin < 0){
-			SearchPageMargin = 0;
-		}
-		$("#RecipieSearchPage").css("margin-left", SearchPageMargin);
-		$("#PostingViewPage").css("margin-left", SearchPageMargin);
-	}
-	if($(window).width() >= 1550){
-		$("#RecipieSearchPage").css("margin-left", 350);
-		$("#PostingViewPage").css("margin-left", 350);
-	}
+	$("#RecipieSearchPage").css("margin-left", "auto");
+	$("#PostingViewPage").css("margin-left", "auto");
 });
 
 </script>
@@ -230,6 +220,16 @@ String[] recipeSplit = recipeDes.split("-,-");
 				</a>
 			</div>
 			
+			<div id="commentWrite">
+				<div id="commentWrtier">댓글 아이디</div>
+				<div id="commentContWrite">
+					<textarea></textarea>
+				</div>
+				<div id="commentWriteBtn">
+					<input type="button" value="등록"/>
+				</div>
+			</div>
+			
 		</c:if>
 			<c:if test="${ totalComments == 0 }">
 				
@@ -338,4 +338,8 @@ String[] recipeSplit = recipeDes.split("-,-");
 			</span>
 		</a>
 	</div>
+</div>
+
+<div id="postWriteBtn">
+	<input type="button" value="글쓰기" onclick="location.href='./recepeBoard_Write.jsp'"/>
 </div>
