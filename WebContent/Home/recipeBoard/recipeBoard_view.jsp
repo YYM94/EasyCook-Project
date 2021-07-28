@@ -62,7 +62,7 @@ String[] recipeSplit = recipeDes.split("-,-");
 
 %>
 <!-- 댓글 관련 -->
-<c:set var="totalComments" value="114"/><!-- 현재 게시글의 댓글 갯수 -->
+<c:set var="totalComments" value="124"/><!-- 현재 게시글의 댓글 갯수 -->
 <c:set var="cWriter" value="댓글"/><!-- 댓글 작성자 -->
 <c:set var="cContent" value="댓글 내용입니다."/><!-- 댓글 내용 -->
 <c:set var="cDate" value="2021-07-22"/><!-- 댓글 작성날짜 -->
