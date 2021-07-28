@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="./css/join.css"/>
 <script src="./js/jquery.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
+<script type="text/javascript" src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
 <script>
 
 	/* 우편번호 찾기 */
@@ -42,8 +43,32 @@
 		}
 	}
 	
-	/* 아이디,비밀번호 유효성 검증 후 에러멘트 발생 */
-	
+/* 	/* 아이디,비밀번호 유효성 검증 후 에러멘트 발생 */
+	function checks(){
+		
+		$('#join_button').click(function(event){
+			
+			var join_id_box = $('#join_id_box').val(); //id
+
+			/*아이디 유효성 검사*/
+			if(chkValId(join_id_box)){
+				$('#idError').hide();
+			}else{
+				$('#idError').show();
+				$('#idError').text("아이디는 오직 문자와 숫자,_기호만 입력 가능합니다.");
+				event.preventDefault();
+			}
+			
+		});
+		
+		var chkValId = function(id){
+
+			var patt = new RegExp(/^[a-z0-9_]+$/);
+
+			return patt.test(id);
+
+		}
+	} */
 	
 	//이메일 입력방식 선택 
 	function emailselect() {
@@ -77,17 +102,17 @@
 	<div id="container">
 		<div id="panel">
 			<div id="panel-body">
-				<form action="join_ok.jsp" method="post" name="reg_form" onsubmit="return joinConfirm();" onreset="return joinreset();" style="margin-bottom: 0;">
+				<form method="post" name="reg_form" onsubmit="return checks();" onreset="return joinreset();" style="margin-bottom: 0;">
 					<div id="panel-header">
 						<a href="./index.jsp" id="join_header_title_1"><span>EasyCook!</span></a><span id="join_header_title_2"> 회원가입</span>
 					</div>
 					<div id="panel-table">
 						<div id="join_id" class="join_title">
 							<strong><label for="join_id_box">아이디</label></strong>
-							<input required type="text" name="join_id_box" id="join_id_box"
+							<input type="text" name="join_id_box" id="join_id_box"
 							class="form-control" maxlength="14"
 							placeholder="8글자 이상 작성하세요."><br/>
-							<span class="error">8글자 이상 입력하세요!</span>
+							<span class="error" id="idError"></span>
 						</div>
 						
 						<div id="join_email" class="join_title">
@@ -188,7 +213,7 @@
 						
 						<div id="join_post_3" class="join_title">
 							<input type="text" name="join_post_box_3" id="join_post_box_3" class="form-control"  
-							placeholder="나머지 상세 주소를 입력하세요." required />
+							placeholder="나머지 상세 주소를 입력하세요." />
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
 						
