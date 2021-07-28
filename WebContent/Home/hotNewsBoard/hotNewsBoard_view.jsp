@@ -61,13 +61,18 @@
 				currentPage = totalPage;
 			}
 
-			int startPage = ((currentPage - 1) / totalCount) * totalCount + 1; ///시작페이징 번호
-			int endPage = startPage + countPage - 1; //끝페이징 번호		
-			if (endPage > totalPage) { //페이징이 10개씩인대 끝게시물에서도 의미없는 페이징번호가 나열되는것을 방지
+			int startPage = currentPage - 3; ///시작페이징 번호
+			int endPage = currentPage + 3; //끝페이징 번호
+			if(currentPage < 4){
+				startPage = 1;
+				endPage = 7;
+			}
+			if(endPage > totalPage){
+				startPage = totalPage-6;
 				endPage = totalPage;
 			}
 
-			if (startPage > 1) {
+			if (currentPage > 4) {
 			%>
 				<a href="hotNewsBoard_view.jsp?page=<%=1%>">[FIRST]</a>
 			<%}
