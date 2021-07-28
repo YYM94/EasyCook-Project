@@ -6,8 +6,7 @@
 <title>EasyCook! 회원 정보 변경</title>
 
 <link rel="stylesheet" type="text/css" href="../css/info_update.css"/>
-
-<script src="./js/jquery.js"></script>
+<script src="../js/jquery.js"></script>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
 <script>
 
@@ -40,13 +39,20 @@
 			}); 
 		});
 	}
-	/* 비밀번호 변경  클릭 시 화면 출력 */
-	function LoginFindPWD(){
-		$('#update_pwd_text').off('click').click(function(){
+	/* 비밀번호 찾기  클릭시 비밀번호찾기 화면 띄우기 */
+	function UpdatePWD(){
+		$('#update_pwd_btn').off('click').click(function(){
 			$('#info_update_pwd').fadeToggle();
 			$('.update_pwd_control').val('');
 			$('#update_pw_q').val('');
-			$('#update_find_pwd_id_text').focus();
+			$('#update_pwd_id_text').focus();
+		});
+	}
+	function UpQ_pw(){
+		$('#update_pw_q').change(function(){ 
+			$('#update_pw_q').each(function () { 
+				$('#update_pwd_q_a').focus();	
+			});
 		});
 	}
 </script>
@@ -57,7 +63,7 @@
 			<div id="panel-body">
 				<form action="update_ok.jsp" method="post" name="reg_form" onsubmit="return updateConfirm();" onreset="return updatereset();" style="margin-bottom: 0;">
 					<div id="panel-header">
-						<a href="./index.jsp" id="update_header_title_1"><span>EasyCook!</span></a><span id="update_header_title_2"> 회원 정보 수정 </span>
+						<a href="./mypage.jsp" id="update_header_title_1"><span>EasyCook!</span></a><span id="update_header_title_2"> 회원 정보 수정 </span>
 					</div>
 					<div id="panel-table">
 						<div id="update_id" class="update_title">
@@ -139,12 +145,14 @@
 						<div id="update_footer">
 							<input type="button" value="변경" id="update_button" style="margin-left:50px"/>&nbsp;&nbsp;
 							<input type="button" value="탈퇴" id="delete_button"/>&nbsp;&nbsp;
-							 <a id="update_pwd_text"> <b onclick="LoginFindPWD()">비밀번호 변경</b></a>
-						</div>
-						</div>
-						</form>
-					
-											<!-- 비밀번호 찾기 영역 -->
+							<a id="update_pwd_btn"><b onclick="UpdatePWD()">비밀번호 재설정</b></a>
+								</div>
+								</div>
+								</form>
+								</div>		
+	
+				
+				<!-- 비밀번호 찾기 영역 -->
 				
 				<div id="info_update_pwd">
 				<div id="update_pwd_header">
@@ -159,8 +167,8 @@
 					</div>
 
 					<div id="info_update_pwd_q">
-						<!-- <b id="find_tel_pwd"><label for="login_find_pwd_tel_box">가입시 선택한 질문</label></b> -->
-						<select name="update_pw_q" id="update_pw_q" onclick="loginQ_pw();">
+						
+						<select name="update_pw_q" id="update_pw_q" onclick="UpQ_pw();">
 								<option value="">질문을 선택하세요.</option>
 								<option value="1">어머니의 성함은?</option>
 								<option value="2">아버지의 성함은?</option>
@@ -178,7 +186,7 @@
 					
 					<div id="info_update_pwd_newpwd_check">
 						<b id="update_pwd_newpwd_check"><label for="update_pwd_tel_box">비밀번호 확인</label></b>
-						<input type="text" name="update_pwd_tel"
+						<input type="text" name="update_pwd_tel_box"
 							id="lupdate_pwd_tel_box" class="update_pwd_control" autocomplete="new-password" />
 					</div>
 										
@@ -188,7 +196,8 @@
 				</div>
 
 			</div>
-		</div>
-	</div>
+
+			</div>
+		
 </body>
 </html>
