@@ -6,16 +6,6 @@
 <link rel="stylesheet" type="text/css" href="../css/recipeBoard.css"/>
 <script src="../js/jquery.js"></script>
 
-<script>
-
-<%--페이지가 작아지면 게시판을 왼쪽에 붙임--%>
-$(window).resize(function(){
-	$("#RecipieSearchPage").css("margin-left", "auto");
-	$("#PostingViewPage").css("margin-left", "auto");
-});
-
-</script>
-
 <%
 //하단 페이지 번호 생성을 위한 전체 게시글 수 검색
 int totalPostings = 196;
@@ -341,5 +331,5 @@ String[] recipeSplit = recipeDes.split("-,-");
 </div>
 
 <div id="postWriteBtn">
-	<input type="button" value="글쓰기" onclick="location.href='./recepeBoard_Write.jsp'"/>
+	<input type="button" value="글쓰기" onclick="location.href='./recipeBoard_Write.jsp'"/>
 </div>
