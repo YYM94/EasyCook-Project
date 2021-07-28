@@ -27,14 +27,22 @@ body{
 }
 
 #admin_search{
-	border: 1px solid red;
 	text-align: center;
 	margin-bottom: 2%;
 }
 
+#admin_search_box{
+	width:40%;
+	height:25px;
+}
+
+#admin_search_btn:hover{
+	color: blue;
+	cursor: pointer;
+}
+
 #admin_search b{
 	font-size: 150%;
-
 }
 
 #admin_cont{
@@ -70,7 +78,8 @@ button{
 
 <div id="admin_panel">
 	<div id="admin_search">
-		<b>검색 영역</b>
+		<input type="text" id="admin_search_box" value="" placeholder="검색어를 입력해주세요." /> 
+					<input type="button" id="admin_search_btn" value="검색" onClick="location.href='#'"/>
 	</div>
 	
 	<div id="admin_cont">
