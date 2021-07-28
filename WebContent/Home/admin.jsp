@@ -27,22 +27,14 @@ body{
 }
 
 #admin_search{
+	border: 1px solid red;
 	text-align: center;
 	margin-bottom: 2%;
 }
 
-#admin_search_box{
-	width:40%;
-	height:25px;
-}
-
-#admin_search_btn:hover{
-	color: blue;
-	cursor: pointer;
-}
-
 #admin_search b{
 	font-size: 150%;
+
 }
 
 #admin_cont{
@@ -67,56 +59,86 @@ body{
 }
 
 button{
-
+	margin-right: 3%;
 }
 </style>
 </head>
 <body>
+<%@ include file="./menubar/adminleftbar.jsp"%>
 <div id="admin_header">
 	<b style="font-size: 200%;">회원정보 관리</b>
 </div>
 
 <div id="admin_panel">
 	<div id="admin_search">
-		<input type="text" id="admin_search_box" value="" placeholder="검색어를 입력해주세요." /> 
-					<input type="button" id="admin_search_btn" value="검색" onClick="location.href='#'"/>
+		<b>검색 영역</b>
 	</div>
 	
 	<div id="admin_cont">
 		<div id="admin_cont_title">
-			<b>아이디</b> <b>이름</b> <b>이용자상태</b> <b>가입날짜</b>
+			<input type="checkbox" /> <b>아이디</b> <b>이름</b> <b>이용자상태</b> <b>가입날짜</b>
 		</div>
 		<div id="admin_cont_list">
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
+			<input type="checkbox" /> 
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="관리"	 style="margin-left: 10%;"/><p/>
+			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" value="탈퇴"	/><p/>
 		</div>
 		
 		<div id="admin_page" style="text-align: center;">
