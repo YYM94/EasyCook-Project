@@ -23,6 +23,30 @@
 				"allowfullscreen>"+
 			"</iframe>");
 	}
+	
+	
+	//레시피 과정 추가 버튼 클릭
+	function addCont(){
+		$("#addedContWrap").append("<div class='recepeCont'>"
+										+"<div class='removeContWrap' onclick='removeCont(this);'>"
+										+"	<div class='removeContLabel'>"
+										+"		지우기"
+										+"	</div>"
+										+"	<div class='removeContBtn'>"
+										+"		<img src='../images/minusBtn.png' width=30px height=25px>"
+								  		+"	</div>"
+								  		+"</div>"
+								  		+"<div class='contWrap'>"
+								  		+"	<img class='contImg' src='../images/recipeBoardContThumbnail.png'>"
+								  		+"	<textarea class='contText'></textarea>"
+								  		+"</div>"
+								  +"</div>");
+	}
+	
+	//레시피 과정 삭제 버튼 클릭
+	function removeCont(node){
+		$(node.parentNode).remove();
+	}
 </script>
 
 <%@ include file="../menubar/top_left_menubar.jsp"%>
@@ -39,6 +63,19 @@
 				<input type="text" id="videoLink" onblur="LoadThumbnail();"/><br>
 				<div id="thumbnail">
 					미리보기
+				</div>
+			</div>
+			<div id="recipeContWrap">
+				<div id="addedContWrap">
+					
+				</div>
+				<div id="addContWrap" onclick="addCont();">
+					<div id="addContBtn">
+						<img src="../images/plusBtn.png" width=30px height=25px>
+					</div>
+					<div id="addContLabel">
+						추가하기
+					</div>
 				</div>
 			</div>
 		</form>
