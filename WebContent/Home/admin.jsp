@@ -61,6 +61,27 @@ body{
 button{
 	margin-right: 3%;
 }
+
+#admin_page_number{
+	margin: 10px 0 0 0 ;
+	font-weight: bold;	
+}
+
+#admin_page_number a:link {
+  color : black;
+  text-decoration: none;
+}
+#admin_page_number a:hover {
+  color : gray;
+  text-decoration: underline;
+}
+#admin_page_number a:active {
+  color : aqua;
+  text-decoration: none;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -142,7 +163,67 @@ button{
 		</div>
 		
 		<div id="admin_page" style="text-align: center;">
-			<b>쪽번호 영역</b>
+			<div id="admin_page_number">
+			<%
+			int currentPage;
+			if(request.getParameter("page") == null){
+				currentPage = 1;
+			}else{
+				currentPage = Integer.parseInt(request.getParameter("page"));
+			}
+			
+			int totalCount=200; 
+			int countList = 8; 
+			int countPage = 7; 
+
+			int totalPage = totalCount / countList;
+
+			if (totalCount % countList != 0) {
+				totalPage++;
+			}
+
+			if (totalPage < currentPage) {
+				currentPage = totalPage;
+			}
+
+			int startPage = currentPage - 3; 
+			int endPage = currentPage + 3; 
+			if(currentPage < 4){
+				startPage = 1;
+				endPage = 7;
+			}
+			if(endPage > totalPage){
+				startPage = totalPage-6;
+				endPage = totalPage;
+			}
+
+			if (currentPage > 4) {
+			%>
+				<a href="admin.jsp?page=<%=1%>">[FIRST]</a>
+			<%}
+			if (currentPage > 1) {
+			%>			
+				<a href="admin.jsp?page=<%=currentPage-1%>">[PREV]</a>
+			<%}
+			for (int iCount = startPage; iCount <= endPage; iCount++) {
+			%> 
+				<a href="admin.jsp?page=<%=iCount%>" >
+				<%if (iCount == currentPage) { %>		
+					<b class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</b>
+			<%} else {%>
+					<span class="PageNumber">&nbsp;<%= iCount %>&nbsp;</span>
+			<%}%>
+				</a>
+			<%}
+
+			if (currentPage < totalPage) {%>
+				<a href="admin.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+			<%}
+			if (endPage < totalPage) {%>
+				<a href="admin.jsp?page=<%=totalPage%>">[LAST]</a>
+			<%} %>
+			
+		</div>
 		</div>
 	</div>
 </div>
