@@ -33,7 +33,7 @@
 				<div id="left_board">
 					<input type="checkbox" id="answer02"> 
 					<label for="answer02">이용자 관리</label>
-					<div>
+					<div class="open">
 						<p>
 							<a href="#">이용자 조회</a>
 						</p>
@@ -42,7 +42,7 @@
 				<div id="left_news">
 					<input type="checkbox" id="answer03"> 
 					<label for="answer03">열린마당 관리</label>
-					<div class="open">
+					<div>
 							<a href="#">공지사항 관리</a><br/><br/>
 							<a href="#">FAQ 관리</a><br/><br/>
 							<a href="#">핫뉴스 관리</a>
