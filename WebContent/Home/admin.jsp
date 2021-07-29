@@ -55,11 +55,11 @@ body{
 }
 
 #admin_cont_list b{
-	margin-right: 9%;
+	margin-right: 10%;
 }
 
 button{
-	margin-right: 3%;
+
 }
 
 #admin_page_number{
@@ -97,71 +97,41 @@ button{
 	
 	<div id="admin_cont">
 		<div id="admin_cont_title">
-			<input type="checkbox" /> <b>아이디</b> <b>이름</b> <b>이용자상태</b> <b>가입날짜</b>
+			<b>아이디</b> <b>이름</b> <b style="margin-right: 13%;">이용자상태</b> <b>가입날짜</b>
 		</div>
 		<div id="admin_cont_list">
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-			<input type="checkbox" /> 
-			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b>2021.07.26</b>
-			<input type="button" value="조회"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="수정"	/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="button" value="탈퇴"	/><p/>
-		</div>
-		
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
+			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
+			<input type="button" value="관리"	/><p/>
 		<div id="admin_page" style="text-align: center;">
 			<div id="admin_page_number">
 			<%
@@ -225,6 +195,7 @@ button{
 			
 		</div>
 		</div>
+	</div>
 	</div>
 </div>
 </body>
