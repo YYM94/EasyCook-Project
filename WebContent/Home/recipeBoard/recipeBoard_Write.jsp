@@ -23,9 +23,45 @@
 				"allowfullscreen>"+
 			"</iframe>");
 	}
+
+	
+	//레시피 과정 삭제 버튼 클릭
+	function removeCont(node){
+		$(node.parentNode).remove();
+		contAmount--;
+	}
+	
+	//레시피 과정 이미지 추가버튼 클릭
+	var changeImgIndex = 0; //바꿀 이미지 위치
+	function addImg(img){
+		imgFileInput.click();
+		changeImgIndex = img.getAttribute('id').substr(7);
+	}
+	//이미지 업로드 시 inputfile change이벤트
+	$(document).ready(function(){
+		$("#imgFileInput").on("change", contImgChange);
+	});
+	function contImgChange(e){
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+		
+		filesArr.forEach(function(f){
+			if(!f.type.match("image/*")){
+				alert("이미지 파일이 아닙니다.");
+				return;
+			}
+			var reader = new FileReader();
+			reader.onload = function(e){
+				$("#contImg"+changeImgIndex).attr("src", e.target.result);
+			}
+			reader.readAsDataURL(f);
+		});
+	}
 	
 	
 	//레시피 과정 추가 버튼 클릭
+	var contIndex = 1; // 요소 아이디
+	var contAmount = 0; // 요소 갯수
 	function addCont(){
 		$("#addedContWrap").append("<div class='recepeCont'>"
 										+"<div class='removeContWrap' onclick='removeCont(this);'>"
@@ -37,15 +73,13 @@
 								  		+"	</div>"
 								  		+"</div>"
 								  		+"<div class='contWrap'>"
-								  		+"	<img class='contImg' src='../images/recipeBoardContThumbnail.png'>"
+								  		+"	<img id='contImg"+contIndex+"' class='contImg'"
+								  		+"		src='../images/recipeBoardContThumbnail.png' onclick='addImg(this);'>"
 								  		+"	<textarea class='contText'></textarea>"
 								  		+"</div>"
 								  +"</div>");
-	}
-	
-	//레시피 과정 삭제 버튼 클릭
-	function removeCont(node){
-		$(node.parentNode).remove();
+		contIndex++;
+		contAmount++;
 	}
 </script>
 
@@ -66,6 +100,7 @@
 				</div>
 			</div>
 			<div id="recipeContWrap">
+				<input type="file" id="imgFileInput" accept="image/*" style="display:none;"/>
 				<div id="addedContWrap">
 					
 				</div>
@@ -77,6 +112,10 @@
 						추가하기
 					</div>
 				</div>
+			</div>
+			<div id="SendButtonWrap">
+				<input type="button" id="writeBtn" value="저장"/>
+				<input type="button" id="cancelBtn" value="취소" onclick="location.href='./recipeBoard_view.jsp'"/>
 			</div>
 		</form>
 	</div>

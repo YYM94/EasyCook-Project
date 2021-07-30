@@ -127,7 +127,7 @@ body{
 .contImg{
     float: left;
     width: 200px;
-    border-radius: 50px;
+    height: 170px;
     position: relative;
     top: 50px;
     left: 10px;
@@ -155,4 +155,46 @@ body{
     padding: 10px;
     border: none;
     outline: none;
+}
+
+
+#SendButtonWrap{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    text-align: -webkit-center;
+}
+#writeBtn{
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 60px;
+    background-color: #E0FFFF;
+    border: none;
+    filter: drop-shadow(0 0 2px #FF6347);
+}
+#cancelBtn{
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: #FFB6C1;
+    border: none;
+    filter: drop-shadow(0 0 2px #FF6347);
+}
+#writeBtn:hover{
+	cursor: pointer;
+}
+#cancelBtn:hover{
+	cursor: pointer;
+}
+#writeBtn:active{
+    filter: drop-shadow(0 0 5px #FF6347);
+}
+#cancelBtn:active{
+    filter: drop-shadow(0 0 5px #FF6347);
 }
