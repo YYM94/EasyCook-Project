@@ -63,7 +63,7 @@ button{
 }
 
 #admin_page_number{
-	margin: 10px 0 0 0 ;
+	margin: 10px 0 10px 0 ;
 	font-weight: bold;	
 }
 
@@ -133,7 +133,8 @@ button{
 			<b>abc123</b> <b>홍길동</b> <b style="margin-right: 15%;">가입</b> <b style="margin-right: 20%;">2021.07.26</b>
 			<input type="button" value="관리"	/><p/>
 		<div id="admin_page" style="text-align: center;">
-			<div id="admin_page_number">
+		
+		<div id="admin_page_number">
 			<%
 			int currentPage;
 			if(request.getParameter("page") == null){
@@ -179,7 +180,7 @@ button{
 			%> 
 				<a href="admin.jsp?page=<%=iCount%>" >
 				<%if (iCount == currentPage) { %>		
-					<b class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</b>
+					<span class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</span>
 			<%} else {%>
 					<span class="PageNumber">&nbsp;<%= iCount %>&nbsp;</span>
 			<%}%>
