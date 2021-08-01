@@ -35,7 +35,7 @@
 					<label for="answer02">이용자 관리</label>
 					<div class="open">
 						<p>
-							<a href="#">이용자 조회</a>
+							<a href="/EasyCook_Project/Home/admin.jsp">이용자 조회</a>
 						</p>
 					</div>
 				</div>

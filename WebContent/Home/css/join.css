@@ -85,6 +85,7 @@ strong:hover{
 	margin-left: 30%;
 	color: red;
 	font-weight: bold;
+	visibility: hidden;
 }
 
 #join_id_box{

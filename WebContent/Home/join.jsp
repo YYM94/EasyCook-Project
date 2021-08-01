@@ -43,14 +43,14 @@
 		}
 	}
 	
-/* 	/* 아이디,비밀번호 유효성 검증 후 에러멘트 발생 */
+/* 	// 아이디,비밀번호 유효성 검증 후 에러멘트 발생 */
 	function checks(){
 		
 		$('#join_button').click(function(event){
 			
 			var join_id_box = $('#join_id_box').val(); //id
 
-			/*아이디 유효성 검사*/
+			//*아이디 유효성 검사
 			if(chkValId(join_id_box)){
 				$('#idError').hide();
 			}else{
@@ -111,16 +111,16 @@
 							<strong><label for="join_id_box">아이디</label></strong>
 							<input type="text" name="join_id_box" id="join_id_box"
 							class="form-control" maxlength="14"
-							placeholder="8글자 이상 작성하세요."><br/>
+							placeholder="8글자 이상 작성하세요." required /><br/>
 							<span class="error" id="idError"></span>
 						</div>
 						
 						<div id="join_email" class="join_title">
 							<strong><label for="join_email_1_box">이메일</label></strong>
 							<input type="text" name="join_email_1_box" id="join_email_1_box" class="form-control"
-							placeholder="이메일을 입력해주세요.">&nbsp;@
+							placeholder="이메일을 입력해주세요." required />&nbsp;@
 							<input type="email" name="join_email_2_box" id="join_email_2_box" class="form-control"
-							autocomplete="email" disabled>&nbsp;
+							autocomplete="email" disabled />&nbsp;
 							<select name="join_email_3_box" id="join_email_3_box" class="form-control" onclick="emailselect();">
 								<option value="" selected>선택하세요.</option>
 								<option value="naver.com">naver.com</option>
@@ -137,7 +137,7 @@
 						<div id="join_pw" class="join_title">
 							<strong><label for="join_pw_box">비밀번호</label></strong>
 							<input type="password" name="join_pw_box" id="join_pw_box" 
-							class="form-control" maxlength="20" placeholder="8~20자 사이로 입력하세요." autocomplete="new-password"/>
+							class="form-control" maxlength="20" placeholder="8~20자 사이로 입력하세요." autocomplete="new-password" required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -145,7 +145,7 @@
 						<div id="join_pw_check" class="join_title">
 							<strong><label for="join_pw_check_box">비밀번호 확인</label></strong>
 							<input type="password" name="join_pw_check_box" id="join_pw_check_box"
-							class="form-control" maxlength="20" placeholder="입력하신 비밀번호와 일치해야합니다." autocomplete="new-password" />
+							class="form-control" maxlength="20" placeholder="입력하신 비밀번호와 일치해야합니다." autocomplete="new-password" required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -153,7 +153,7 @@
 						<div id="join_name" class="join_title">
 							<strong><label for="join_name_box">이름</label></strong>
 							<input type="text" name="join_name_box" id="join_name_box"
-							class="form-control" maxlength="6" placeholder="이름을 입력하세요." />
+							class="form-control" maxlength="6" placeholder="이름을 입력하세요." required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -161,7 +161,7 @@
 						<div id="join_nickname" class="join_title">
 							<strong><label for="join_nickname_box">닉네임</label></strong>
 							<input type="text" name="join_nickname_box" id="join_nickname_box" 
-							class="form-control" maxlength="8" placeholder="닉네임을 입력하세요." />
+							class="form-control" maxlength="8" placeholder="닉네임을 입력하세요." required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -169,11 +169,11 @@
 						<div id="join_tel" class="join_title">
 							<strong><label for="join_tel_1_box">핸드폰 번호</label></strong>
 							<input type="tel" name="join_tel_1_box" id="join_tel_1_box"
-							class="form-control" maxlength="3" style="width: 10%;" />&nbsp;-
+							class="form-control" maxlength="3" style="width: 10%;" required />&nbsp;-
 							<input type="tel" name="join_tel_2_box" id="join_tel_2_box"
-							class="form-control" maxlength="4" style="width: 11%;" />&nbsp;-
+							class="form-control" maxlength="4" style="width: 11%;" required />&nbsp;-
 							<input type="tel" name="join_tel_3_box" id="join_tel_3_box"
-							class="form-control" maxlength="4" style="width: 11%;" />
+							class="form-control" maxlength="4" style="width: 11%;" required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -192,7 +192,7 @@
 						
 						<div id="join_pw_q_a" class="join_title">
 							<strong><label for="join_pw_q_a_box">비밀번호 확인 답</label></strong>
-							<input type="text" name="join_pw_q_a_box" id="join_pw_q_a_box" class="form-control" />
+							<input type="text" name="join_pw_q_a_box" id="join_pw_q_a_box" class="form-control" required />
 							<br/>
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
@@ -213,7 +213,7 @@
 						
 						<div id="join_post_3" class="join_title">
 							<input type="text" name="join_post_box_3" id="join_post_box_3" class="form-control"  
-							placeholder="나머지 상세 주소를 입력하세요." />
+							placeholder="나머지 상세 주소를 입력하세요." required />
 							<span class="error">8글자 이상 입력하세요!</span>
 						</div>
 						
