@@ -35,7 +35,9 @@
 					<legend class="hidden">검색</legend>
 					<label class="hidden">검색분류</label> 
 					<select name="f">
-					<option value="title">제목</option>
+					<option value="search_name">회원이름</option>
+					<option value="search_join">회원상태</option>
+					<option value="search_id">회원아이디</option>
 					</select> 
 					<label class="hidden">검색어</label> 
 					<input type="text" name="q"	value="" placeholder="검색어를 입력해주세요." /> 
