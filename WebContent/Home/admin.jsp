@@ -30,7 +30,18 @@
 
 	<div id="admin_panel">
 		<div id="admin_search">
-			<b>검색 영역</b>
+			<form class="table-form">
+				<fieldset>
+					<legend class="hidden">검색</legend>
+					<label class="hidden">검색분류</label> 
+					<select name="f">
+					<option value="title">제목</option>
+					</select> 
+					<label class="hidden">검색어</label> 
+					<input type="text" name="q"	value="" placeholder="검색어를 입력해주세요." /> 
+					<input class="btn btn-search" type="submit" value="검색" />
+				</fieldset>
+			</form>
 		</div>
 
 		<div id="admin_cont">
@@ -273,7 +284,7 @@
 					<button id="admin_member_set" class="admin_infoBtn">탈퇴</button>
 				</div>
 				<div id="admin_info_close">
-					<button id="close" class="admin_infoBtn" onclick="close()">X</button>
+					<button id="close" class="admin_infoBtn" onclick="location='admin.jsp'">X</button>
 				</div>	
 		</div>
 	</div>
