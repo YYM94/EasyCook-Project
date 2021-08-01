@@ -45,7 +45,7 @@
 					<div>
 							<a href="/EasyCook_Project/Home/FAQgong/adminnotice.jsp">공지사항 관리</a><br/><br/>
 							<a href="/EasyCook_Project/Home/FAQgong/adminfaq.jsp">FAQ 관리</a><br/><br/>
-							<a href="#">핫뉴스 관리</a>
+							<a href="/EasyCook_Project/Home/hotNewsBoard/admin_hotnews_list.jsp">핫뉴스 관리</a>
 					</div>
 				</div>
 			</div>
