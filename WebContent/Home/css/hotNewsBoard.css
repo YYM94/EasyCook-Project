@@ -1,9 +1,8 @@
 @charset "UTF-8";
 body{
-	background: url("../images/recipeBoardBackground.jpg");
+	background: url("../images/hnboardbackground.jpg");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
-/* 	background: #1A2422; */	
+	background-size: cover;
 }
 
 .img_wrap{
@@ -75,7 +74,12 @@ body{
 	margin: 0 150px 0 0;
 	float: right;
 }
-
+.page_number{
+	margin-left: auto; margin-right: auto;
+	width:40%;
+	float: right;
+	margin-bottom: 5%;
+}
 .page_number a:link {
   color : black;
   text-decoration: none;

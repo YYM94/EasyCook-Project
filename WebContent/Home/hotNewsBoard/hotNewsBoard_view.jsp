@@ -21,9 +21,9 @@
 			<div class="hotNews_hyper" onclick="window.open('http://www.google.co.kr');">
 				<li>
 					<div class="img_wrap">
-						<img class="hotNews_img" src="../images/from.jpg" />
+						<img class="hotNews_img" src="../images/hnboardtemp.jpg" />
 					</div>
-					<p>기사제목 : 페이지창 어떻게만듦?대박이네 나도빨리만들고싶어 하지만너무 어렵겠지?</p>
+					<p>기사제목 : 0~74세 등 6월 예약자 중 예약취소·접종연기자0~74세 등 6월 예약자 중 예약취소·접종연기자</p>
 				</li>
 			</div>
 			<%
