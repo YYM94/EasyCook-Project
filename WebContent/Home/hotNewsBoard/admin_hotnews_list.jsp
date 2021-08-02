@@ -5,17 +5,22 @@
 <meta charset="UTF-8">
 <title>핫뉴스 관리</title>
 <style type="text/css">
+body{
+	background: url("../images/recipeBoardBackground.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #admin_header {
 	text-align: center;
-	margin: auto;
-	padding: 1%;
-	background: peachpuff;
-	width: 50%;
+	margin-left: 36%; 
+	padding: 1%; padding-top: 3%;
+	width: 50%; max-width: 786px;
 }
 
 #admin_panel {
-	margin: auto;
-	width: 50%;
+	margin-left: 36%;
+	width: 50%; max-width: 786px;
 	background: lavender;
 	padding: 1%;
 }
@@ -26,9 +31,10 @@
 }
 #admin_hn_input{
 	float: right;
-	margin: 20px 0 20px 0;
+	margin: 20px 20px 20px 0;
 	
 }
+
 
 #admin_list_no{
 	width: 7%;
@@ -89,7 +95,7 @@
 </style>
 </head>
 
-<body>
+<body >
 	<%@ include file="../menubar/adminleftbar.jsp"%>
 	<div id="admin_header">
 		<b style="font-size: 200%;">핫뉴스 관리</b>

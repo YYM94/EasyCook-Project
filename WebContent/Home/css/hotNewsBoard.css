@@ -1,7 +1,9 @@
 @charset "UTF-8";
-
 body{
-	background: #1A2422;
+	background: url("../images/recipeBoardBackground.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+/* 	background: #1A2422; */	
 }
 
 .img_wrap{
@@ -75,7 +77,7 @@ body{
 }
 
 .page_number a:link {
-  color : white;
+  color : black;
   text-decoration: none;
 }
 .page_number a:hover {

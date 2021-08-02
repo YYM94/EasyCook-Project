@@ -5,20 +5,24 @@
 <meta charset="UTF-8">
 <title>핫뉴스 등록</title>
 <style type="text/css">
+body{
+	background: url("../images/recipeBoardBackground.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #admin_header {
 	text-align: center;
-	margin: auto;
-	padding: 1%;
-	background: peachpuff;
+	margin-left: 36%; 
+	padding: 1%; padding-top: 3%;
 	width: 50%;
 }
 
 #admin_panel {
-	margin: auto;
+	margin-left: 36%;
 	width: 50%;
 	background: lavender;
 	padding: 1%;
-}
 
 p {
 	float: left;
