@@ -3,6 +3,7 @@
 #join_body{
 	margin: 0px;
 	-webkit-animation: fadein 1000ms ease-out;
+	background-image: url("../images/vegetable2.png");
 }
 
 @-webkit-keyframes fadein {
@@ -20,7 +21,7 @@
 } /* 폼 전체 판 껍데기 */
 
 #panel-body{
-	background: gray;
+	background: rgba(234, 255, 234, 0.95);
 	border-radius: 20px;
 	width: 70%;
 	margin-left: 15%;
@@ -158,7 +159,7 @@ strong:hover{
 	width: 22%;
 	font-size: 1.1em;
 	border-radius: 10px;
-	background: salmon;
+	background: #D7FFC8;
 	font-weight: bolder;
 	cursor: pointer;
 } /* 우편번호 찾기 버튼 */
@@ -180,7 +181,7 @@ strong:hover{
 	width: 15%;
 	font-size: 1.2em;
 	border-radius: 10px;
-	background: salmon;
+	background: #D7FFC8;
 	font-weight: bolder;
 } /* 가입하기,취소 버튼 */
 

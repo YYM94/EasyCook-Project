@@ -4,6 +4,7 @@
 	margin: 0px;
 	margin-top: 10%;
 	-webkit-animation: fadein 1000ms ease-out;
+	background-image: url("../images/vegetable2.png");
 }
 
 #panel_login{
@@ -12,7 +13,7 @@
 }
 
 #panle_body_login{
-	background: peachpuff;
+	background: rgba(255, 201, 173, 0.95);
 	border-radius: 20px;
 	width: 70%;
 	margin-top: 10%;
@@ -93,7 +94,7 @@ strong{
 	width: 25%;
 	font-size: 1.5em;
 	border-radius: 10px;
-	background: salmon;
+	background: #FFB791;
 	font-weight: 500;
 }
 
@@ -140,7 +141,7 @@ strong{
 	display: none;
 	width: 70%;
 	margin-top: 10%;
-	background: lightpink;
+	background: rgba(255, 206, 202, 0.95);
 }
 
 #login_find_id_header{
@@ -225,7 +226,7 @@ strong{
 }
 
 #login_find_id_real{
-	background: aqua;
+	background: #FF4674;
 	display: none;
 	text-align: center;
 	margin-top: 3%;
@@ -235,16 +236,9 @@ strong{
 #login_find_button_id_title{
 	font-size: 1.2em;
 	border-radius: 10px;
-	background: salmon;
+	background: #FF86A4;
 	font-weight: 400;
 }
-
- #login_find_button_login_title{
- 	font-size: 1.2em;
-	border-radius: 10px;
-	background: salmon;
-	font-weight: 400;
- }
 
  /********** 비밀번호 찾기 영역 ************/
  
@@ -375,13 +369,13 @@ strong{
 	display: none;
 	width: 70%;
 	margin-top: 10%;
-	background: lavender;
+	background: rgba(222, 208, 255, 0.95);
 }
 
 #login_find_button_pwd_title{
 	font-size: 1.2em;
 	border-radius: 10px;
-	background: salmon;
+	background: #CEBAFF;
 	font-weight: 400;
 }
 

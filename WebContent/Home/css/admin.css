@@ -6,18 +6,17 @@
 
 #admin_header {
 	text-align: center;
-	margin: auto;
 	padding: 1%;
-	background: peachpuff;
+/* 	background: peachpuff; */
 	width: 50%;
+	margin:0 5% 0 30%;
 }
 
 #admin_panel {
-	margin: auto;
 	width: 50%;
 	background: lavender;
-	margin-top: 2%;
 	padding: 1%;
+	margin:0 5% 0 30%;
 }
 
 #admin_search {
@@ -30,23 +29,74 @@
 	font-size: 150%;
 }
 
+#admin_list_table th{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;	
+}
+
+#admin_no{
+	width: 10%;
+}
+
+#admin_id{
+	width: 25%;
+}
+
+#admin_name{
+	width: 15%;
+}
+
+#admin_check{
+	width: 15%;
+}
+
+#admin_date{
+	width: 30%;
+}
+
+/* #admin_button{
+	width: 20%;
+} */
+
+#admin_list_table td{
+	text-align: center; 
+	padding: 6px 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+}
+
+#a_id{
+	text-align: center;
+	padding-left: 14px;
+	overflow: hidden; 
+	text-overflow: ellipsis;/*생략부호*/
+	white-space: nowrap;
+}
+
 #admin_cont {
-/* 	border: 1px solid orange; */
+	margin-left: 4%;
 }
 
 #admin_cont_title {
 /* 	border: 2px solid yellow; */
 	margin-bottom: 2%;
 	font-size: 120%;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
 }
 
 #admin_cont_list {
 /* 	border: 2px solid purple; */
 }
 
+.a_title{
+	float: left;
+	width: 20%;	
+}
 .a_text{
 	float: left;
 	width: 20%;
+/* 	border-bottom-style: dotted; */
 }
 
 /* #admin_cont_list b {
@@ -55,7 +105,7 @@
 
 #admin_member {
 	width: 40%;
-	margin: auto;
+	margin:0 5% 0 35%;
 	background: antiquewhite;
 	display: none;
 	padding: 1%;
@@ -64,7 +114,7 @@
 }
 
 #info_title{
-	font-size: 200%;
+	font-size: 150%;
 	font-weight: bold;
 }
 
@@ -74,7 +124,7 @@
 }
 
 #admin_member_cont{
- 	margin-left: 23%; 
+ 	margin-left: 15%; 
 }
 
 .member_text{
@@ -85,7 +135,12 @@
 #admin_member_pwd{
 	text-align: center;	
 	margin-top: 7%;
-	margin-bottom: 1%;
+	margin-bottom: 2%;
+}
+
+.member_info{
+	width: 40%;
+	height: 5%;
 }
 
 #member_button{

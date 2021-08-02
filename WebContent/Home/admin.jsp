@@ -14,10 +14,7 @@
 		$('#admin_member').show();
 	}
 
-	function close() {
 
-
-	}
 </script>
 
 
@@ -25,7 +22,7 @@
 <body id="admin_body">
 	<%@ include file="./menubar/adminleftbar.jsp"%>
 	<div id="admin_header">
-		<b style="font-size: 200%;">회원 관리</b>
+		<h3 style="font-size: 200%; text-align: center; padding: 10px; margin: 0 0 0 0;">회원 관리</h3>
 	</div>
 
 	<div id="admin_panel">
@@ -35,9 +32,9 @@
 					<legend class="hidden">검색</legend>
 					<label class="hidden">검색분류</label> 
 					<select name="f">
+					<option value="search_id">회원아이디</option>
 					<option value="search_name">회원이름</option>
 					<option value="search_join">회원상태</option>
-					<option value="search_id">회원아이디</option>
 					</select> 
 					<label class="hidden">검색어</label> 
 					<input type="text" name="q"	value="" placeholder="검색어를 입력해주세요." /> 
@@ -47,121 +44,27 @@
 		</div>
 
 		<div id="admin_cont">
-			<div id="admin_cont_title">
-				<b class="a_text">아이디</b> <b class="a_text">이름</b> <b class="a_text">이용자상태</b> <b class="a_text">가입날짜</b>&nbsp;
-			</div>
-			<div id="admin_cont_list">
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
-				
-				<b id="a_id" class="a_text">abc123</b> 
-				<b id="a_name" class="a_text">홍길동</b> 
-				<b id="a_check" class="a_text">가입</b> 
-				<b id="a_regdate" class="a_text">2021.07.26</b> 
-				<button id="member_button" onclick="member()" >관리</button>
-				<p />
+			<table id="admin_list_table">
+				<tr>
+					<th id="admin_no">번호</th>
+					<th id="admin_id">아이디</th>
+					<th id="admin_name">이름</th>
+					<th id="admin_check">회원상태</th>
+					<th id="admin_date">등록날짜</th>
+					<th id="admin_button">관리</th>
+				</tr>
+				<% for(int i=15; i>=1; i--){ %>
+				<tr>
+					<td><%=i %></td>
+					<td><div id="a_id">abc123</div></td>
+					<td>홍길동</td>
+					<td>가입</td>
+					<td>2021.08.02</td>
+					<td><button id="member_button" onclick="member()" >관리</button></td>
+				</tr>
+				<%} %>
+			
+		</table>
 				
 				<div id="admin_page" style="text-align: center;">
 
@@ -237,42 +140,42 @@
 			</div>
 			<div id="admin_member_cont">
 				<div id="admin_member_id">
-					<strong id="member_id" class="member_text">아이디</strong> <b
-						id="member_id_info" class="member_info">abc123</b>
+					<strong id="member_id" class="member_text">아이디</strong> 
+					<input type="text" id="member_id_info" class="member_info" value="abc123" disabled />
 					<p />
 				</div>
 				<div id="admin_member_email">
-					<strong id="member_email" class="member_text">이메일</strong> <b
-						id="member_email_info" class="member_info">abc123@naver.com</b>
+					<strong id="member_email" class="member_text">이메일</strong> 
+					<input type="text" id="member_email_info" class="member_info" value="abc123@naver.com"/>
 					<p />
 				</div>
 				<div id="admin_member_nickname">
-					<strong id="member_nickname" class="member_text">닉네임</strong> <b
-						id="member_nickname_info" class="member_info">이지쿡</b>
+					<strong id="member_nickname" class="member_text">닉네임</strong> 
+					<input type="text" id="member_nickname_info" class="member_info" value="이지쿡"/>
 					<p />
 				</div>
 				<div id="admin_member_tel">
-					<strong id="member_tel" class="member_text">핸드폰 번호</strong> <b
-						id="member_tel_info" class="member_info">010-2323-4545</b>
+					<strong id="member_tel" class="member_text">핸드폰 번호</strong> 
+					<input type="text" id="member_tel_info" class="member_info" value="010-2323-4545"/>
 					<p />
 				</div>
 				<div id="admin_member_pwd_q">
-					<strong id="member_pwd_q" class="member_text">가입시 선택한 질문</strong> <b
-						id="member_pwd_q_info" class="member_info">나의 출신 초등학교는?</b>
+					<strong id="member_pwd_q" class="member_text">가입시 선택한 질문</strong> 
+					<input type="text" id="member_pwd_q_info" class="member_info" value="나의 출신 초등학교는?" disabled />
 					<p />
-					<strong id="member_pwd_q_a" class="member_text">가입시 선택한
-						질문의 답</strong> <b id="member_pwd_q_a_info" class="member_info">KG초등학교</b>
+					<strong id="member_pwd_q_a" class="member_text">가입시 선택한 질문의 답</strong> 
+					<input type="text" id="member_pwd_q_a_info" class="member_info" value="KG초등학교" disabled />
 					<p />
 				</div>
 				<div id="admin_member_post">
-					<strong id="member_post" class="member_text">우편번호</strong> <b
-						id="member_post_info" class="member_info">07741</b>
+					<strong id="member_post" class="member_text">우편번호</strong> 
+					<input type="text" id="member_post_info" class="member_info" value="07741 "/>
 					<p />
 					<strong id="member_addr1" class="member_text">주소</strong> 
-					<b id="member_addr1_info" class="member_info">서울시 동작구 장승배기로 171</b>
+					<input type="text" id="member_addr1_info" class="member_info" value="서울시 동작구 장승배기로 171" />
 					<p />
 					<strong id="member_addr2" class="member_text">상세주소</strong> 
-					<b id="member_addr2_info" class="member_info">노량진 아이비빌딩 303호</b>
+					<input type="text" id="member_addr2_info" class="member_info" value="노량진 아이비빌딩 303호" />
 					<p />
 				</div>
 			</div>
