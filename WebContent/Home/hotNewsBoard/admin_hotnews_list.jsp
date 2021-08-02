@@ -56,9 +56,9 @@
 	border-bottom-width: 1px;
 	border-bottom-style: dotted;
 }
-#left{ /* 또는 #notice .left라고 해도 동일 */
+#left{
 	text-align: left;
-	padding-left: 14px; /* 들여쓰기 */
+	padding-left: 14px;
 	width: 20em;
 	overflow: hidden; 
 	text-overflow: ellipsis;
@@ -160,15 +160,15 @@
 
 			if (currentPage > 4) {
 			%>
-				<a href="admin_hotnews.jsp?page=<%=1%>">[FIRST]</a>
+				<a href="admin_hotnews_list.jsp?page=<%=1%>">[FIRST]</a>
 			<%}
 			if (currentPage > 1) {
 			%>			
-				<a href="admin_hotnews.jsp?page=<%=currentPage-1%>">[PREV]</a>
+				<a href="admin_hotnews_list.jsp?page=<%=currentPage-1%>">[PREV]</a>
 			<%}
 			for (int iCount = startPage; iCount <= endPage; iCount++) {
 			%> 
-				<a href="admin_hotnews.jsp?page=<%=iCount%>" >
+				<a href="admin_hotnews_list.jsp?page=<%=iCount%>" >
 				<%if (iCount == currentPage) { %>		
 					<b class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</b>
 			<%} else {%>
@@ -178,10 +178,10 @@
 			<%}
 
 			if (currentPage < totalPage) {%>
-				<a href="admin_hotnews.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+				<a href="admin_hotnews_list.jsp?page=<%=currentPage+1%>">[NEXT]</a>
 			<%}
 			if (endPage < totalPage) {%>
-				<a href="admin_hotnews.jsp?page=<%=totalPage%>">[LAST]</a>
+				<a href="admin_hotnews_list.jsp?page=<%=totalPage%>">[LAST]</a>
 			<%} %>			
 		</div>
 	</div>
