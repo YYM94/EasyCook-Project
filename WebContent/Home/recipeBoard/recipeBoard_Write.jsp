@@ -101,6 +101,9 @@
 			</div>
 			<div id="recipeContWrap">
 				<input type="file" id="imgFileInput" accept="image/*" style="display:none;"/>
+				<div id="contTitle">
+					요리 과정
+				</div>
 				<div id="addedContWrap">
 					
 				</div>

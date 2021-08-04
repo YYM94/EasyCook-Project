@@ -64,6 +64,13 @@ body{
 	width: 100%;
 }
 
+#contTitle{
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    user-select: none;
+}
+
 #addContWrap{
     margin-top: 30px;
     width: 115px;

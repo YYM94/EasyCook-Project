@@ -17,7 +17,6 @@ body{
 	margin-right: auto;
 	margin-bottom: 100px;
 	position: relative;
-    overflow: hidden;
 	top: 150px;
 	background-color: #FFFAFA;
 	border-radius: 15px;
@@ -212,6 +211,27 @@ body{
 	background-color: #FFFFF0;
 	filter: drop-shadow(0 0 3px #FF6347);
 }
+
+#moveTopBtn{
+    position: absolute;
+    margin-top: 40px;
+    left: 1100px;
+}
+#moveTopBtn input{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #FFE4B5;
+}
+#moveTopBtn input:hover{
+    background-color: #FFA07A;
+}
+#moveTopBtn input:active{
+    background-color: #FFA07A;
+	filter: drop-shadow(0 0 3px #FF6347);
+}
+
 
 
 /*게시글 검색 영역*/

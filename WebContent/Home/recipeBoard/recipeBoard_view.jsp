@@ -6,6 +6,12 @@
 <link rel="stylesheet" type="text/css" href="../css/recipeBoard.css"/>
 <script src="../js/jquery.js"></script>
 
+<script>
+	function ScrollTop(){
+		$('html, body').scrollTop(0);
+	}
+</script>
+
 <%
 //하단 페이지 번호 생성을 위한 전체 게시글 수 검색
 int totalPostings = 196;
@@ -221,10 +227,12 @@ String[] recipeSplit = recipeDes.split("-,-");
 			</div>
 			
 		</c:if>
-			<c:if test="${ totalComments == 0 }">
-				
-			</c:if>
-		
+		<c:if test="${ totalComments == 0 }">
+			
+		</c:if>
+		<div id="moveTopBtn">
+			<input type="button" value="▲" onclick="ScrollTop();"/>
+		</div>
 	</div>
 <%} %>
 
