@@ -23,15 +23,75 @@
 					<option value="titlecont">제목+내용</option>
 				</select> <label class="hidden">검색어</label> <input type="text" name="search"
 					value="" placeholder="검색어를 입력해주세요." /> 
-					<input type="button" value="게시물 작성" id="text_create_button" onClick="location.href='#'" />
+					<input type="button" value="게시물 작성" id="text_create_button" onClick="location='../recipeBoard/recipeBoard_Write.jsp'" />
 					<input type="submit" value="검색" class="btn" onClick="location.href='#'"/>
 			</fieldset>
 			</div>
-			<input type="text" id="post_ex1" value="" placeholder="내가 올린 게시물 ">
-			<input type="text" id="post_ex2" value="" placeholder="내가 올린 게시물 ">
-			<input type="text" id="post_ex3" value="" placeholder="내가 올린 게시물 ">
+			<div id="post_ex1"> 내가 올린 게시물 </div>
+			<div id="post_ex2"> 내가 올린 게시물 </div>
+			<div id="post_ex3"> 내가 올린 게시물 </div>
+			
+			<div id="page_number_controller">
+			<%
+			int currentPage;
+			if(request.getParameter("page") == null){
+				currentPage = 1;
+			}else{
+				currentPage = Integer.parseInt(request.getParameter("page"));
+			}
+			
+			int totalCount=200; 
+			int countList = 8; 
+			int countPage = 7; 
 
-			</div>
+			int totalPage = totalCount / countList;
+
+			if (totalCount % countList != 0) {
+				totalPage++;
+			}
+
+			if (totalPage < currentPage) {
+				currentPage = totalPage;
+			}
+
+			int startPage = currentPage - 3; 
+			int endPage = currentPage + 3; 
+			if(currentPage < 4){
+				startPage = 1;
+				endPage = 7;
+			}
+			if(endPage > totalPage){
+				startPage = totalPage-6;
+				endPage = totalPage;
+			}
+
+			if (currentPage > 4) {
+			%>
+				<a href="mypage.jsp?page=<%=1%>">[FIRST]</a>
+			<%}
+			if (currentPage > 1) {
+			%>			
+				<a href="mypage.jsp?page=<%=currentPage-1%>">[PREV]</a>
+			<%}
+			for (int iCount = startPage; iCount <= endPage; iCount++) {
+			%> 
+				<a href="mypage.jsp?page=<%=iCount%>" >
+				<%if (iCount == currentPage) { %>		
+					<b class="CurrentPageNumber">&nbsp;<%= iCount %>&nbsp;</b>
+			<%} else {%>
+					<span class="PageNumber">&nbsp;<%= iCount %>&nbsp;</span>
+			<%}%>
+				</a>
+			<%}
+
+			if (currentPage < totalPage) {%>
+				<a href="mypage.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+			<%}
+			if (endPage < totalPage) {%>
+				<a href="mypage.jsp?page=<%=totalPage%>">[LAST]</a>
+			<%} %>			
+		</div>
+		</div>
 			
 
 		<div id="mypage_text">
@@ -43,53 +103,24 @@
 				</select> <label class="hidden">검색어</label> <input type="text" name="search"
 					value="" placeholder="검색어를 입력해주세요." /> 
 					<input type="submit" value="검색" class="btn" onClick="location.href='#'"/>
-					<input type="button" value="게시글 작성" id="text_create_button" onClick="location.href='#'" />
+					<input type="button" value="게시글 작성" id="text_create_button" onClick="location='../recipeBoard/recipeBoard_Write.jsp'" />
 			</fieldset>
 			</div>
-		<input type="text" id="text_ex1" value="" placeholder="내가 작성한 게시글 ">
-		<input type="text" id="text_ex2" value="" placeholder="내가 작성한 게시글 ">
-		</div>
+		<div id="text_ex1" >내가 작성한 게시글</div>
+		<div id="text_ex2" >내가 작성한 게시글</div>
 				
-		<div id="page_number_control">
-		<div class="page_number">
-	<%
-			int currentPage;
-			if(request.getParameter("page") == null){
-				currentPage = 1;
-			}else{
-				currentPage = Integer.parseInt(request.getParameter("page"));
-			}
-			
-			int totalCount=200; //총게시물
-			int countList = 8; //보여질 게시물
-			int countPage = 5; //보여질 페이징갯수
+		<div id="page_number_controller">
+			<%
 
-			int totalPage = totalCount / countList;
-
-			if (totalCount % countList != 0) {
-				totalPage++;
-			}
-
-
-			if (totalPage < currentPage) {//현재페이지가 끝페이지를 넘어가는것을 방지
-				currentPage = totalPage;
-			}
-
-			int startPage = ((currentPage - 1) / totalCount) * totalCount + 1; ///시작페이징 번호
-			int endPage = startPage + countPage - 1; //끝페이징 번호		
-			if (endPage > totalPage) { 
-				endPage = totalPage;
-			}
-			
-			if (currentPage < totalPage) {%>
-			<a href="mypage.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+			if (currentPage > 4) {
+			%>
+				<a href="mypage.jsp?page=<%=1%>">[FIRST]</a>
 			<%}
-			
 			if (currentPage > 1) {
-				%>
+			%>			
 				<a href="mypage.jsp?page=<%=currentPage-1%>">[PREV]</a>
 			<%}
-			for (int iCount = startPage; iCount <= endPage; iCount++) {//페이징 5개씩
+			for (int iCount = startPage; iCount <= endPage; iCount++) {
 			%> 
 				<a href="mypage.jsp?page=<%=iCount%>" >
 				<%if (iCount == currentPage) { %>		
@@ -100,13 +131,12 @@
 				</a>
 			<%}
 
-			
+			if (currentPage < totalPage) {%>
+				<a href="mypage.jsp?page=<%=currentPage+1%>">[NEXT]</a>
+			<%}
 			if (endPage < totalPage) {%>
 				<a href="mypage.jsp?page=<%=totalPage%>">[LAST]</a>
-			<%} %>
-			
-			<input type="button" value="HomePage" id="HomePage_button" onclick="location='../index.jsp';" />
-			<input type="button" value="회원 정보 수정" id="info_update_button" onclick="location='info_update.jsp';" />
+			<%} %>			
 		</div>
 		</div>
 		
